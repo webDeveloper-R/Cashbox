@@ -1,0 +1,43 @@
+
+<div class="search-four modal-border">
+	<div class="modal-header text-center">
+        <h3 class="modal-title small-title">PLEASE WAIT: DOWNLOADING REPORT...</h3>
+    </div>
+ 	<div class="modal-body">
+		<div class="row">
+		    <div class="information col-xs-12">
+		    	<div class="col-xs-12 tabs-container">
+			    	<uib-tabset vertical="true" type="pills" class="tab-animation">
+			    		<uib-tab ng-repeat="tab in tabs" active="tab.active" disable="tab.disabled">
+			    			<uib-tab-heading class="paragraph">
+			    				<span class="icon-tab text-center" ng-class="tab.icon"></span> {{tab.header}}
+			    			</uib-tab-heading>
+			    			<div class="tab-info">
+			    				<p class="paragraph" ng-bind-html="tab.description"></p>
+			    			</div>
+			    		</uib-tab>
+			    	</uib-tabset>
+			    </div>
+		    </div>
+		</div>
+
+		<div class="row">
+			<uib-progressbar class="progress-striped active" value="barValue" type="success"></uib-progressbar>
+			<div class="col-xs-12 general-info">
+				<div class="left-info">
+					<div class="center-block hidden-xs">
+			    		<img class="img-responsive" src="../images/user.png"></img>
+			    	</div>
+			    	<div class="personal-info">
+			    		<h3 class="person-name">{{person.first_name}} {{person.last_name}}</h3>
+			    		<p class="line-info paragraph hidden-xs">Full Background Report</p>
+			    		<p class="line-info paragraph">{{person.age}} years old | {{person.state}}</p>
+			    	</div>
+			    </div>
+		    	<div class="folder-icon hidden-xs">
+		    		<img class="img-responsive" src="../images/folder.png"></img>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+</div>

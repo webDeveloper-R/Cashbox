@@ -1,0 +1,29 @@
+<div class="login">
+  <info-spy-header></info-spy-header>
+  <div class="container">
+    <div class="jumbotron col-sm-8 col-sm-offset-2 text-center">
+      <h1>LOGIN</h1>
+      <div class="form-group" ng-class="{'has-error': user.email.error}">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" ng-model="user.email.value" ng-enter="login()">
+        </div>
+        <div class="arrow-up" ng-if="user.email.error"></div>
+        <p class="error" ng-if="user.email.error">{{user.email.error}}</p>
+      </div>
+      <div class="form-group" ng-class="{'has-error': user.password.error}">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="user.password.value" ng-enter="login()">
+        </div>
+        <div class="arrow-up" ng-if="user.password.error"></div>
+        <p class="error" ng-if="user.password.error">{{user.password.error}}</p>
+      </div>
+      <button type="button" class="login-btn btn btn-lg btn-success" ng-click="login()">Login</button>
+      <div class="links">
+        <a href="#" class="forgot-link">Forgot password?</a>
+        <a href="#" class="not-registered-link">Not yet registered?</a>
+      </div>
+    </div>
+  </div>
+</div>

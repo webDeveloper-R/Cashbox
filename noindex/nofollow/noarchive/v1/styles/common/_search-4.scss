@@ -1,0 +1,171 @@
+.search-four {
+	border: 3px solid $color-light-blue;
+	border-radius: 5px;
+
+	background-color: lighten($color-gray, 50%);
+
+	.modal-header {
+		background-color: $color-light-blue;
+		color: $color-white;
+		border-bottom: none;
+	}
+
+	.modal-body {
+		padding-top: 0px;
+	}
+
+	.progress {
+		height: 90px;
+
+		.progress-bar {
+			border-radius: 0 12px 12px 0;
+		}
+	}
+
+	.general-info {
+		position: absolute;
+		top: 0;
+		height: 90px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.icon {
+		font-size: 75px;
+		color: $color-black;
+		margin-right: 20px;
+	}
+
+	.personal-info {
+		text-align: left;
+
+		.folder-icon {
+			
+			.icon {
+				font-size: 70px;
+				margin-right: 0;
+				margin-left: 20px;
+			}
+		}
+	}
+
+	.person-name {
+		text-align: left;
+		color: $color-light-blue;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.line-info {
+		margin: 0;
+	}
+
+	.line {
+		border: 1px solid $color-gray;
+	}
+
+	.tabs-container {
+		padding-top: 15px;
+
+		.tab-animation {
+			display: flex;
+			align-items: center;
+			background-color: $color-white;
+
+			li {
+				background-color: lighten($color-gray, 50%);
+				margin-top: 0;
+
+				a {
+					color: $color-gray;
+					text-align: center;
+				}
+
+				&.active {
+					background-color: $color-white;
+				}
+			}
+		}
+
+		.tab-content {
+		    display: block;
+    		float: left;
+    		width: 100%;
+
+    		@media screen and (min-width: $break-small) {
+				width: 75%;
+			}
+
+			@media screen and (min-width: $break-medium) {
+				width: 80%;
+			}
+		}
+	}
+
+	.nav-stacked {
+		margin-right: 0;
+		margin-bottom: 10px;
+
+		@media screen and (min-width: $break-small) {
+			margin-right: 20px;
+			margin-bottom: 0;
+		}
+
+		.icon-tab {
+			font-size: 30px;
+			display: block;
+		}
+
+		li {
+			text-align: center;
+
+			@media screen and (min-width: $break-small) {
+				text-align: left;
+			}
+		}
+
+		li.active a {
+			background-color: $color-white;
+			color: $color-black;
+
+			.icon-tab {
+				color: $color-black;
+			}
+		}
+
+		li.disabled {
+			.icon-tab {
+				color: #777777;
+			}
+		}
+	}
+
+	/* set reference point */
+	.tab-animation > .tab-content {
+	    position: relative;
+	}
+
+	/* set animate effect */
+	.tab-animation > .tab-content > .tab-pane{
+	    transition: 0.2s linear opacity;
+	}
+
+	/* overwrite display: none and remove from document flow */
+	.tab-animation > .tab-content > .tab-pane.active-remove {
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	    display: block;
+	}
+
+	/* opacity=0 when removing "active" class */
+	.tab-animation > .tab-content > .tab-pane.active-remove-active {
+	    opacity: 0;
+	}
+
+	/* opacity=0 when adding "active" class */
+	.tab-animation > .tab-content > .tab-pane.active-add {
+	    opacity: 0;
+	}
+}

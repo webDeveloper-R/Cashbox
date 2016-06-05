@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+	RewriteCond %{HTTP_HOST} ^checkthem.com$
+	RewriteRule (.*) https://www.checkthem.com/$1 [R=301,L]
+</IfModule>

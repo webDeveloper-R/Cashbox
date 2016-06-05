@@ -1,0 +1,117 @@
+.services-page {
+	.header {
+		
+		.logo {
+			position: absolute;
+
+			@media screen and (min-width: $break-small) {
+				position: initial;
+			}
+		}
+	}
+
+	.title-panel {
+		text-align: center;
+		font-weight: $font-light;
+		font-size: $font-xtra-large;
+	}
+
+	.flex-grid {
+		display: block;
+
+		@media screen and (min-width: $break-small) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.panel {
+		box-shadow: none;
+		padding: 40px 0;
+		margin-bottom: 0;
+	}
+
+	.first-panel {
+		.flex-grid {
+			margin-top: 20px;
+
+			@media screen and (min-width: $break-small) {
+				margin-top: 70px;
+			}
+		}
+	}
+
+	.second-panel {
+		background: linear-gradient(
+	      rgba(62,137,239,0.75), 
+	      rgba(62,137,239,0.75)
+	    ), url(../images/lights.jpg) center top;
+
+	    color: $color-white;
+
+	    .title-panel {
+	    	margin: 0;
+	    }
+
+	    .emphasis {
+	    	color: $color-white !important;
+	    }
+
+	    p {
+	    	margin: 0;
+	    }
+	}
+
+	.third-panel {
+		
+		.title-panel {
+			margin-bottom: 20px;
+		}
+
+		.emphasis {
+			color: $color-black !important;
+		}
+	}
+
+	.list {
+		padding: 35px 0;
+		position: relative;
+
+		.border-bottom {
+		    position: absolute;
+		    border-bottom: 2px solid;
+		    width: 15%;
+		    bottom: 0;
+		    left: 40%;
+		}
+
+		.list-title {
+			color: $color-light-blue-new;
+			text-decoration: underline;
+			font-weight: $font-regular;
+			font-size: $font-medium;
+			margin-bottom: 25px;
+		}
+
+		ul {
+			margin-top: 25px;
+		}
+
+		li {
+			list-style: none;
+			position: relative;
+			margin-bottom: 10px;
+		}
+
+		.glyphicon {
+			color: $color-green;
+			position: absolute;
+		    left: -10px;
+		    top: 3px;
+		}
+	}
+
+	.bottom-text {
+		margin-top: 20px;
+	}
+}

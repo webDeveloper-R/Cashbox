@@ -1,0 +1,51 @@
+/**
+ * Sizes for media queries
+ */
+$break-extra-small : 	408px;
+$break-small-max : 	767px;
+$break-small	: 	768px;
+$break-medium	:	992px;
+$break-large	: 	1200px;
+
+/**
+ * Colors
+ */
+$color-green : #6AD17F;
+$color-light-green: #5BCB6C;
+$color-lighter-green: #DEF9E0;
+
+$color-red: #EE8B8C;
+$color-light-red: #F9CDD0;
+
+$color-yellow: #948D47;
+$color-light-yellow: #FEFBDA;
+
+$color-blue: #1E4EA3;
+$color-light-blue-new : #3E89EF;
+$color-light-blue : #64A4fA;
+
+$color-light-gray : #EFEFEF;
+$color-gray : #E4E4E4;
+$color-dark-gray : #D7D7D7;
+$color-dark-gray-new : #9E9E9E;
+$color-darker-gray : #3A3A3A;
+
+$color-black : #000000;
+$color-white : #FFFFFF;
+
+/**
+ * Fonts weigth
+ */
+$font-light: 300;
+$font-regular: normal;
+
+/**
+ * Fonts sizes
+ */
+$font-smallest: 12px;
+$font-xtra-small: 14px;
+$font-small: 16px;
+$font-medium-s: 20px;
+$font-medium: 24px;
+$font-large: 30px;
+$font-xtra-large: 40px;

@@ -1,0 +1,138 @@
+.checkout {
+  .jumbotron {
+    margin: 0;
+    padding: 0;
+  }
+
+  .information-container {
+    padding: 10px 0px;
+  }
+
+  .avatar-info {
+    margin: 10px 0px;
+
+    .avatar {
+      margin-right: 20px;
+      display: block;
+      float: left;
+    }
+
+    .line-info {
+      font-size: 16px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .details-info {
+    margin-bottom: 20px;
+
+    .feature {
+      font-size: 16px;
+      margin-bottom: 5px;
+
+      .glyphicon {
+        color: #007947;
+        margin-right: 6px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .bottom-info {
+    .img-logos {
+      margin-top: 10px;
+    }
+  }
+
+  .princing {
+    .top {
+      border-bottom: 1px solid #EEEEEE;
+
+      h2 {
+        margin-top: 10px;
+      }
+    }
+
+    .package {
+      border-bottom: 1px solid #EEEEEE;
+      padding: 10px 0;
+
+      .recommended {
+        display: inline-block;
+        margin-top: 2px;
+        margin-bottom: 0px;
+      }
+
+      .glyphicon {
+        font-size: 16px;
+        margin-right: 5px;
+        display: block;
+        float: left;
+      }
+
+      .price {
+        margin: 0px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: #007947;
+      }
+
+      &.active {
+        color: #007947;
+      }
+    }
+
+    .form {
+      padding: 10px 0;
+
+      .credit-card {
+        margin-bottom: 5px;
+      }
+
+      .car-exp {
+        .car-exp-col {
+          margin-bottom: 10px;
+
+          @media screen and (max-width: 767px) {
+            padding: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  .search-anyone {
+    background-color: #0086C8;
+
+    .text {
+      color: white;
+      margin: 20px 0px;
+      text-align: center;
+      float: none;
+
+      @media screen and (min-width: 992px) {
+        text-align: left;
+        float: left;
+      }
+    }
+
+    .btn {
+      margin: 20px 0px;
+      padding: 8px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media screen and (min-width: 992px) {
+        float: right;
+      }
+
+      .link {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}

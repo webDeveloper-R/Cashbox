@@ -1,0 +1,42 @@
+h2.nf-title {
+  text-align: center;
+  font-size: 68px;
+  color: #6AD17F;
+  font-family: "HelveticaNeue-Light";
+}
+
+h2.nf-title span {
+  color: #333333;
+}
+
+h3.nf-desc {
+  text-align: center;
+  width: 430px;
+  font-size: 37px;
+  font-family: "HelveticaNeue-Light";
+  margin: 0 auto;
+}
+
+h4.nf-question {
+  text-align: center;
+  margin: 50px 0 50px 0;
+  font-size: 22px;
+  font-family: "HelveticaNeue-Light";
+}
+
+ul.nf-links {
+  text-align: center;
+  font-family: "HelveticaNeue-Light";
+  font-size: 18px;
+  list-style: none;
+  padding: 0;
+  text-decoration: underline;
+
+  li {
+    margin: 10px;
+  }
+}
+
+h1.nf-search {
+  text-align: center;
+}

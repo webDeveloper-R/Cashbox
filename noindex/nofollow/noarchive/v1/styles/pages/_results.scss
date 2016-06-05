@@ -1,0 +1,154 @@
+.results {
+  .jumbotron {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 0;
+
+    .logo {
+      max-width: 120px;
+      display: block;
+      float: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      @media screen and (min-width: $break-medium) {
+        float: left;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .subheader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .highlight {
+      color: $color-light-blue;
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-right: 10px;
+    }
+  }
+
+  .information-container {
+    .header {
+      margin: 10px 0;
+      padding-top: 10px;
+    }
+
+    .title {
+      margin: 0;
+    }
+  }
+
+  .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #fff;
+    float: right;
+    margin-right: 12%;
+  }
+
+  .results-info {
+    background-color: lighten($color-gray, 62.7%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media screen and (min-width: $break-small) {
+      padding-top: 0;
+    }
+
+    .results {
+      max-width: 900px;
+    }
+
+    .emphasis {
+      font-size: 28px;
+      color: $color-light-blue;
+      line-height: 30px;
+      margin-bottom: 5px;
+
+      @media screen and (min-width: $break-small) {
+        font-size: 20px;
+        line-height: inherit;
+        margin-bottom: 0;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .relative-info {
+      display: block;
+    }
+
+    .result {
+      background-color: $color-white;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    .button-container {
+      margin-top: 5px;
+    }
+  }
+
+  .table-results {
+    border: 5px solid lighten($color-gray, 40%);
+    background-color: $color-white;
+    margin-bottom: 0;
+
+    thead {
+      background-color: lighten($color-gray, 40%);
+    }
+    tbody {
+      color: $color-light-blue;
+      
+      tr {
+        &:hover {
+          background-color: #e9f7ff;
+        }
+      }
+    }
+    td {
+      border-top: 5px solid lighten($color-gray, 40%);
+      vertical-align: middle;
+    }
+  }
+
+  .btn-success {
+    background: $color-green;
+    background-color: #00944e;
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMDA2ODM3IiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMwMDliNTIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjUiLz48c3RvcCBzdG9wLWNvbG9yPSIjMDA5YjUyIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMC41MSIvPjxzdG9wIHN0b3AtY29sb3I9IiMwMGI0NWYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
+    background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(0, 104, 55)),color-stop(0.5, rgb(0, 155, 82)),color-stop(0.51, rgb(0, 155, 82)),color-stop(1, rgb(0, 180, 95)));
+    /* Android 2.3 */
+    background-image: -webkit-linear-gradient(bottom,rgb(0, 104, 55) 0%,rgb(0, 155, 82) 50%,rgb(0, 155, 82) 51%,rgb(0, 180, 95) 100%);
+    /* IE10+ */
+    background-image: linear-gradient(to top,rgb(0, 104, 55) 0%,rgb(0, 155, 82) 50%,rgb(0, 155, 82) 51%,rgb(0, 180, 95) 100%);
+    background-image: -ms-linear-gradient(bottom,rgb(0, 104, 55) 0%,rgb(0, 155, 82) 50%,rgb(0, 155, 82) 51%,rgb(0, 180, 95) 100%);
+ 
+    /* IE8- CSS hack */
+    @media \0screen\,screen\9 {
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00b45f",endColorstr="#ff006837",GradientType=0);
+    }
+
+    @media screen and (min-width: $break-small) {
+      display: inline-block;
+    }
+
+    .icon {
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+    }
+  }
+}

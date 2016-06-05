@@ -1,0 +1,140 @@
+<div class="checkout">
+  <div id="search" class="jumbotron">
+    <info-spy-header></info-spy-header>
+  </div>
+  <div class="container information-container">
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="avatar-info col-xs-12 clear-padding">
+            <img class="img-responsive avatar" src="../images/yeoman.png">
+            <p class="line-info">{{ person.name }}</p>
+            <p class="line-info">Age: {{ person.age }}</p>
+            <p class="line-info">Location: {{ person.location }}</p>
+          </div>
+          <div class="details-info col-xs-12 clear-padding">
+            <h3 class="title text-center">Comprehensive &amp; Accurate Background Reports</h3>
+            <p class="feature">
+              <span class="glyphicon glyphicon-ok"></span>Traffic Ticket
+            </p>
+            <p class="feature">
+              <span class="glyphicon glyphicon-ok"></span>Sex Offenders
+            </p>
+            <p class="feature">
+              <span class="glyphicon glyphicon-ok"></span>Licenses
+            </p>
+            <p class="feature">
+              <span class="glyphicon glyphicon-ok"></span>Arrest
+            </p>
+            <p class="feature">
+              <span class="glyphicon glyphicon-ok"></span>Records
+            </p>
+            <p class="feature">
+              <span class="glyphicon glyphicon-ok"></span>Divorce Records
+            </p>
+            <p class="feature">
+              <span class="glyphicon glyphicon-ok"></span>Partners &amp; Associates
+            </p>
+            <p class="feature">
+              <span class="glyphicon glyphicon-ok"></span>Personal Information
+            </p>
+            <p class="feature">
+              <span class="glyphicon glyphicon-ok"></span>Related Persons
+            </p>
+            <p class="feature">
+              <span class="glyphicon glyphicon-ok"></span>Address History
+            </p>
+            <p class="feature">
+              <span class="glyphicon glyphicon-ok"></span>Marriage Records
+            </p>
+          </div>
+          <div class="text-center bottom-info">
+            <span>Background checks have been seen on:</span>
+            <img class="img-responsive center-block img-logos" src="../images/pricing.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 princing">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="top col-xs-12 clear-padding">
+            <h2>Pick your Plan</h2>
+            <h3>Unlimited Reports - One Flat Fee</h3>
+            <p>You can run background checks on as many people you want as often as you want!</p>
+          </div>
+          <div class="package col-xs-12 clear-padding" ng-repeat="package in PACKAGES" ng-class="{'active': package.selected}" ng-click="selectPackage(package)">
+            <div class="col-xs-6 clear-padding">
+              <span class="glyphicon glyphicon-ok"></span>
+              <h4 class="recommended">{{package.title}}</h4>
+              <h5>{{package.subtitle}}</h5>
+            </div>
+            <div class="col-xs-6 clear-padding">
+              <h2 class="price">{{package.price}}</h2>
+              <a href="#">Most Popular</a>
+            </div>
+          </div>
+          <div class="form col-xs-12 clear-padding">
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email">
+              </div>
+              <div class="form-group credit-card">
+                <input type="number" class="form-control" placeholder="Credit Card #">
+              </div>
+              <div class="form-group car-exp">
+                <div class="col-xs-12 clear-padding">
+                  <label for="card-exp">Card Exp.</label>
+                </div>
+                <div class="car-exp-col col-sm-6 clear-padding-left">
+                  <select id="card-exp" class="form-control">
+                    <option>Jan</option>
+                    <option>Feb</option>
+                    <option>Mar</option>
+                    <option>Apr</option>
+                    <option>May</option>
+                    <option>Jun</option>
+                    <option>Jul</option>
+                    <option>Aug</option>
+                    <option>Sep</option>
+                    <option>Oct</option>
+                    <option>Nov</option>
+                    <option>Dec</option>
+                  </select>
+                </div>
+                <div class="car-exp-col col-sm-6 clear-padding-right">
+                  <select id="card-exp" class="form-control">
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success center-block">CONTINUE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-anyone">
+    <div class="container">
+      <h1 class="text">Search Anyone. Get The Answers.</h1>
+      <button type="button" class="btn btn-success"><a class="link" href="#search">START YOUR SEARCH</a></button>
+    </div>
+  </div>
+</div>

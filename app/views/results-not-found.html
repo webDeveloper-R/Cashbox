@@ -1,0 +1,90 @@
+<div class="results">
+  <div id="search" class="jumbotron">
+    <div class="container text-center">
+      <a href="/">
+        <img class="img-responsive logo center-block" src="../app/images/logo.svg">
+      </a>
+    </div>
+  </div>
+
+  <div class="information-container">
+    <div class="container">
+      <div class="header text-center">
+        <h2 class="title">No Results Found for <span class="emphasis">"{{resultName}}"</span>!</h2>
+      </div>
+      <div class="text-left col-sm-8 col-sm-offset-2 errors-container">
+        <ul>
+          <li class="error" ng-repeat="error in errors">{{error}}</li>
+        </ul>
+      </div>
+      <div class="text-left col-sm-8 col-sm-offset-2">
+        <h4 class="small-subtitle">Suggestions:</h4>
+        <ul>
+          <li class="paragraph">
+            Expand your search to include All States 
+            <a href="#" tooltip-placement="bottom" uib-tooltip="We suggest you expand your search to include 'All States'">
+              <span class="tooltip-icon glyphicon glyphicon-info-sign"><span>
+            </a>
+          </li>
+          <li class="paragraph">
+            Make sure all words are spelled correctly 
+            <a href="#" tooltip-placement="bottom" uib-tooltip="Make sure you spelled the First Name and Last Name correctly">
+              <span class="tooltip-icon glyphicon glyphicon-info-sign"><span>
+            </a>
+          </li>
+          <li class="paragraph">
+            Try their maiden name 
+            <a href="#" tooltip-placement="bottom" uib-tooltip="Try searching any other possible last names, such as their maiden name.">
+              <span class="tooltip-icon glyphicon glyphicon-info-sign"><span>
+            </a>
+          </li>
+          <li class="paragraph">
+            Try their legal name (not nickname) 
+            <a href="#" tooltip-placement="bottom" uib-tooltip="Try searching for their legal name, not nicknames (for example, search for Catherine (legal name) not Cathy (nickname))">
+              <span class="tooltip-icon glyphicon glyphicon-info-sign"><span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="results-info">
+    <div class="container">
+
+      <div class="col-xs-12 information">
+          <div id="search-bar" class="form-inline col-xs-12 clear-padding" role="form">
+            <div class="form-group" ng-class="{'has-error': person.firstname.error}">
+              <input id="first-name" type="text" ng-enter="search()" ng-model="person.firstname.value" class="form-control input-lg font-small" placeholder="First Name" autofocus>
+              <div class="arrow-up" ng-if="person.firstname.error"></div>
+              <p class="error" ng-if="person.firstname.error">{{person.firstname.error}}</p>
+            </div>
+            <div class="form-group" ng-class="{'has-error': person.middlename.error}">
+              <input id="middle-name" type="text" ng-enter="search()" ng-model="person.middlename.value" class="form-control input-lg input-small-width font-small" placeholder="Middle Name" autofocus>
+              <div class="arrow-up" ng-if="person.middlename.error"></div>
+              <p class="error" ng-if="person.middlename.error">{{person.middlename.error}}</p>
+            </div>
+            <div class="form-group" ng-class="{'has-error': person.lastname.error}">
+              <input type="text" ng-enter="search()" ng-model="person.lastname.value" class="form-control input-lg font-small" placeholder="Last Name">
+              <div class="arrow-up" ng-if="person.lastname.error"></div>
+              <p class="error" ng-if="person.lastname.error">{{person.lastname.error}}</p>
+          </div>
+          <div class="form-group" ng-class="{'has-error': person.city.error}">
+              <input type="text" ng-enter="search()" ng-model="person.city.value" class="form-control input-lg font-small" placeholder="City">
+              <div class="arrow-up" ng-if="person.city.error"></div>
+              <p class="error" ng-if="person.city.error">{{person.city.error}}</p>
+          </div>
+            <div class="form-group" ng-enter="search()" ng-class="{'has-error': person.state.error}">
+              <select id="select-state" ng-model="person.state.value" ng-options="option for (key, option) in states" class="form-control input-lg font-small" change-on-keyup></select>
+              <div class="arrow-up" ng-if="person.state.error"></div>
+              <p class="error" ng-if="person.state.error">{{person.state.error}}</p>
+            </div>
+        </div>
+        <div class="form-group col-xs-12 clear-padding">
+            <button type="submit" class="btn btn-success btn-lg center-block paragraph" ng-click="search()">Submit Search &raquo;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <info-spy-footer></info-spy-footer>
+  </div>
+</div>

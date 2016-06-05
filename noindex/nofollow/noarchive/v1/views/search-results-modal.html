@@ -1,0 +1,15 @@
+<div class="search-results-modal">
+	<uib-tabset justified="true">
+    	<uib-tab ng-repeat="tab in tabs track by $index" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
+    		<search-one ng-if="$index===0"></search-one>
+    		<search-two ng-if="$index===1"></search-two>
+            <search-three ng-if="$index===2"></search-three>
+            <!--<search-four ng-if="$index===3"></search-four>-->
+    	</uib-tab>
+    </uib-tabset>
+    <!--<div class="modal-footer">
+    	<div class="col-xs-12 text-center">
+    		<p class="paragraph"><span class="icon glyphicon glyphicon-warning-sign"></span>Your search is anonymous. {{person.firstname.value}} {{person.lastname.value}} will never know you searched him.</p>
+    	</div>
+    </div>-->
+</div>

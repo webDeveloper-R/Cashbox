@@ -1,0 +1,93 @@
+.progress-bar-modal {
+	border: 3px solid $color-light-blue;
+	border-radius: 5px;
+
+	.modal-title {
+		font-weight: bold;
+	}
+	.modal-subtitle {
+		margin-bottom: 25px;
+	}
+
+	.modal-body {
+		padding: 25px 0;
+	}
+
+	.testimonials {
+		.right-border {
+			margin-bottom: 15px;
+
+			@media screen and (min-width: $break-medium) {
+				-webkit-border-image: -webkit-gradient(radial, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 0 100% 0 0;
+				-webkit-border-image: -webkit-radial-gradient(ellipse at center, black, rgba(0, 0, 0, 0)) 0 100% 0 0;
+				-moz-border-image: -moz-radial-gradient(ellipse at center, black, rgba(0, 0, 0, 0)) 0 100% 0 0; 
+				-o-border-image: -o-radial-gradient(ellipse at center, black, rgba(0, 0, 0, 0)) 0 100% 0 0;
+				border-image: radial-gradient(ellipse at center, black, rgba(0, 0, 0, 0)) 0 100% 0 0;
+				border-image-width: 1px;
+
+				margin-bottom: 0;
+			}
+		}
+
+		.glyphicon {
+			color: $color-green;
+		}
+
+		.testimonial-title {
+			margin: 30px 0 20px;
+		}
+
+		.testimonial {
+			margin-bottom: 5px;
+		}
+
+		.person-info {
+			display: block;
+		}
+	}
+}
+
+.animate-switch-container {
+	position:relative;
+	overflow:hidden;
+	min-height: 250px;
+	
+	@media screen and (min-width: $break-large) {
+		min-height: 130px;
+	}
+
+	@media screen and (min-width: $break-medium) {
+		min-height: 150px;
+	}
+
+	@media screen and (min-width: $break-small) {
+		min-height: 150px;
+	}
+}
+
+.animate-switch.ng-animate {
+	-webkit-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+.animate-switch.ng-enter {
+	top:-100%;
+}
+.animate-switch.ng-leave.ng-leave-active {
+	top: 100%;
+}
+.animate-switch.ng-leave {
+	top:0;
+}
+.animate-switch.ng-enter.ng-enter-active {
+	top: 0;
+}

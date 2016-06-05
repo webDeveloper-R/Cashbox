@@ -1,0 +1,55 @@
+<div ng-if="isHomePage" id="search-bar" class="form-inline" role="form">
+  <div class="form-group" ng-class="{'has-error': person.firstname.error}">
+    <p class="advice">Start Here - Enter a first and last name to search anybody!</p>
+    <div class="arrow-down adv"></div>
+    <input id="first-name" type="text" ng-enter="search()" ng-blur="isEmptyFN()" ng-model="person.firstname.value" class="form-control input-lg font-medium-s" placeholder="First Name" autofocus>
+    <div class="arrow-up" ng-if="person.firstname.error"></div>
+    <p class="error" ng-if="person.firstname.error">{{person.firstname.error}}</p>
+  </div>
+  <div class="form-group" ng-class="{'has-error': person.lastname.error}">
+    <input type="text" ng-enter="search()" ng-blur="validateLN()" ng-model="person.lastname.value" class="form-control input-lg font-medium-s" placeholder="Last Name">
+    <div class="arrow-up" ng-if="person.lastname.error"></div>
+    <p class="error" ng-if="person.lastname.error">{{person.lastname.error}}</p>
+  </div>
+  <div class="form-group" ng-enter="search()" ng-class="{'has-error': person.state.error}">
+    <select id="select-state" ng-model="person.state.value" ng-options="option for (key, option) in states" class="form-control input-lg font-medium-s" change-on-keyup></select>
+    <div class="arrow-up" ng-if="person.state.error"></div>
+    <p class="error" ng-if="person.state.error">{{person.state.error}}</p>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success btn-lg font-medium-s" ng-click="search()">Search &raquo;</button>
+  </div>
+</div>
+
+<div ng-if="!isHomePage" id="search-bar" class="form-inline" role="form">
+  <div class="form-group" ng-class="{'has-error': person.firstname.error}">
+    <input id="first-name" type="text" ng-enter="search()" ng-blur="isEmptyFN()" ng-model="person.firstname.value" class="form-control font-small" placeholder="First Name" autofocus>
+    <div class="arrow-up" ng-if="person.firstname.error"></div>
+    <p class="error" ng-if="person.firstname.error">{{person.firstname.error}}</p>
+  </div>
+  <div class="form-group" ng-class="{'has-error': person.middlename.error}">
+    <input id="middle-name" type="text" ng-enter="search()" ng-model="person.middlename.value" class="form-control font-small" placeholder="Middle Name" autofocus>
+    <div class="arrow-up" ng-if="person.middlename.error"></div>
+    <p class="error" ng-if="person.middlename.error">{{person.middlename.error}}</p>
+  </div>
+  <div class="form-group" ng-class="{'has-error': person.lastname.error}">
+    <input type="text" ng-enter="search()" ng-blur="validateLN()" ng-model="person.lastname.value" class="form-control font-small" placeholder="Last Name">
+    <div class="arrow-up" ng-if="person.lastname.error"></div>
+    <p class="error" ng-if="person.lastname.error">{{person.lastname.error}}</p>
+  </div>
+  <div class="form-group" ng-class="{'has-error': person.city.error}">
+      <input type="text" ng-enter="search()" ng-model="person.city.value" class="form-control font-small" placeholder="City">
+      <div class="arrow-up" ng-if="person.city.error"></div>
+      <p class="error" ng-if="person.city.error">{{person.city.error}}</p>
+  </div>
+  <div class="form-group" ng-enter="search()" ng-class="{'has-error': person.state.error}">
+    <select id="select-state" ng-model="person.state.value" ng-options="option for (key, option) in states" class="form-control font-small" change-on-keyup></select>
+    <div class="arrow-up" ng-if="person.state.error"></div>
+    <p class="error" ng-if="person.state.error">{{person.state.error}}</p>
+  </div>
+  <div class="form-group">
+    <div ng-if="!bigButton" class="btn-small" ng-click="search()">
+      <span class="icon glyphicon glyphicon-search"></span>
+    </div>
+  </div>
+</div>

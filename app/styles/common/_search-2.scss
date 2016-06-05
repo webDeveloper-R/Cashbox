@@ -1,0 +1,56 @@
+.search-two {
+
+	.personal-info {
+		display: flex;
+		align-items: flex-start;
+		padding: 0 50px;
+	    text-align: left;
+	    justify-content: space-between;
+	}
+
+	.icon {
+		margin-top: 20px;
+		font-size: 40px;
+		color: $color-light-blue;
+		margin-right: 20px;
+	}
+
+	.person-name {
+		text-align: center;
+		font-weight: $font-regular;
+
+		@media screen and (min-width: $break-small) {
+			text-align: left;
+		}
+	}
+
+	.line {
+		border-top: 1px solid $color-light-blue;
+		margin-top: 15px;
+	}
+
+	.icons-container {
+		margin: 15px 0;
+
+		.icon-container {
+			display: block;
+			float: left;
+			position: relative;
+
+			min-width: 100px;
+			margin: 10px 15px;
+		}
+	}
+
+	.spinner-loader {
+		font-size: 11px;
+		margin-bottom: 25px;
+	}
+
+	.social-network-icon {
+    	font-size: 30px;
+    	position: absolute;
+    	left: 25px;
+    	top: -1px;
+    }
+}

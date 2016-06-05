@@ -1,0 +1,38 @@
+.search-results-modal {
+	border: 3px solid $color-light-blue;
+	border-radius: 5px;
+
+	.nav-justified {
+		display: none;
+
+		/*@media screen and (min-width: $break-small) {
+			display: block;
+		}*/
+	}
+
+	.modal-title {
+		font-weight: bold;
+	}
+	.modal-subtitle {
+		margin-bottom: 25px;
+	}
+
+	.modal-body {
+		padding: 25px 0;
+	}
+
+	.modal-footer {
+		background-color: #FFFF99;
+		color: #FF0000;
+		font-size: 16px;
+		border-color: $color-green;
+
+		.paragraph {
+			margin: 0;
+		}
+
+		.icon {
+			margin-right: 20px;
+		}
+	}
+}

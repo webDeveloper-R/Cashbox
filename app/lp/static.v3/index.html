@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Background Check Services to Search People and Find Public Records – Checkthem.com</title>
+    <meta name="description" content="Find people using our public background search. We search billions of reports for phone numbers, criminal records, arrest records, address history, marriage/divorce records, and much more.">
+    <meta name="keywords" content="background check, people search, public records, find people by name, search records, online background check, personal background check, background check services, people finders">
+    <meta name="viewport" content="width=device-width">
+    <link rel='stylesheet' id='bootstrap'  href='css/bootstrap.css' type='text/css' media='all' />
+    
+    <link rel="stylesheet" href="css/main.css">
+    <base href="/">
+    <meta name="google-site-verification" content="YMQvzufbZj6juXjggHJQuyxWUHhLxMm18VmYVW-usgw" />
+  </head>
+  <body>
+
+    <div class="main-page">
+        <div id="search" class="jumbotron">
+            <div class="header">
+                <div class="container">
+                    <div class="col-xs-12 clear-padding">
+                        <div class="menu">
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid clear-padding">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#login-navbar-collapse" aria-expanded="false">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse clear-padding text-center" id="login-navbar-collapse">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a href="/services.html">Services</a></li>
+                                            <li><a href="/about-us.html">About Us</a></li>
+                                            <li><a href="/blog/">Blog</a></li>
+                                            <li><a href="/contact.html">Contact</a></li>
+                                            <!--<li class="text-center"><span class="phone">888-888-8888</span></li>-->
+                                        </ul>
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>
+                        </div>
+                        <div class="logo">
+                            <img class="img-responsive" src="lp/static.v3/images/home/logo2.gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container text-center">
+                <div class="main-info fade-in one">
+                    <h1 class="title">Public Records Search</h1>
+                    <p class="subtitle">Police and Arrest Records, Contact Information, and much more...</p>
+                </div>
+                <div class="fade-in one">
+                    <!--Search bar -->
+                    <div id="search-bar" class="form-inline" role="form">
+                        <div class="form-group firstname">
+                            <!--<p class="advice">Start Here - Enter a first and last name to search anybody!</p>
+                            <div class="arrow-down adv"></div>-->
+                            <input id="first-name" type="text" ng-enter="search()" class="form-control input-lg" placeholder="First Name" autofocus>
+                            <div class="arrow-up firstname hidden"></div>
+                            <p class="error firstname hidden"></p>
+                        </div>
+                        <div class="form-group lastname">
+                            <input id="last-name" type="text" ng-enter="search()" class="form-control input-lg" placeholder="Last Name">
+                            <div class="arrow-up lastname hidden"></div>
+                            <p class="error lastname hidden"></p>
+                        </div>
+                        <div class="form-group state" ng-enter="search()">
+                            <select id="select-state" class="form-control input-lg">
+                                <option>All states</option>
+                                <option>Alabama</option>
+                                <option>Alaska</option>
+                                <option>American Samoa</option>
+                                <option>Arizona</option>
+                                <option>Arkansas</option>
+                                <option>California</option>
+                                <option>Colorado</option>
+                                <option>Connecticut</option>
+                                <option>Delaware</option>
+                                <option>Florida</option>
+                                <option>Georgia</option>
+                                <option>Guam</option>
+                                <option>Hawaii</option>
+                                <option>Idaho</option>
+                                <option>Illinois</option>
+                                <option>Indiana</option>
+                                <option>Iowa</option>
+                                <option>Kansas</option>
+                                <option>Kentucky</option>
+                                <option>Louisiana</option>
+                                <option>Maine</option>
+                                <option>Maryland</option>
+                                <option>Massachusetts</option>
+                                <option>Michigan</option>
+                                <option>Minnesota</option>
+                                <option>Mississippi</option>
+                                <option>Missouri</option>
+                                <option>Montana</option>
+                                <option>Nebraska</option>
+                                <option>Nevada</option>
+                                <option>New Hampshire</option>
+                                <option>New Jersey</option>
+                                <option>New Mexico</option>
+                                <option>New York</option>
+                                <option>North Carolina</option>
+                                <option>North Dakota</option>
+                                <option>Ohio</option>
+                                <option>Oklahoma</option>
+                                <option>Oregon</option>
+                                <option>Pennsylvania</option>
+                                <option>Puerto Rico</option>
+                                <option>Rhode Island</option>
+                                <option>South Carolina</option>
+                                <option>South Dakota</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Utah</option>
+                                <option>Vermont</option>
+                                <option>Virgin Islands</option>
+                                <option>Virginia</option>
+                                <option>Washington</option>
+                                <option>West Virginia</option>
+                                <option>Wisconsin</option>
+                                <option>Wyoming</option>
+                            </select>
+                            <div class="arrow-up state hidden"></div>
+                            <p class="error state hidden"></p>
+                        </div>
+                        <div class="form-group">
+                            <button id="submit" type="submit" class="btn btn-success btn-lg">SEARCH &raquo;</button>
+                        </div>
+                    </div>
+                    <!--/Search bar -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container information-container panel">
+            <div class="col-xs-12 clear-padding general-info">
+                <p class="description3">Search Anyone in 3 Steps</p>
+                <div class="columns col-xs-12">
+                    <div class="col-xs-12 col-sm-4 col">
+                        <div class="column">
+                            <!--<div class="img-container">
+                                <!--<img class="img-responsive center-block" src="lp/static.v3/images/home/rocket.svg" alt="" title=""></img>
+                            </div>-->
+                            <p class="description">
+                                Step 1
+                            </p>
+                            <p class="description2"><b>Enter a name above</b> <br>and click search!</p>
+                            <img src="https://www.checkthem.com/static.v4/images/home/step1.png" width=150 height=150/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col">
+                        <div class="column">
+                            <!--<div class="img-container">
+                                <img class="img-responsive center-block" src="lp/static.v3/images/home/stadistics.svg" alt="" title=""></img>
+                            </div>-->
+
+                         <p class="description">
+                                Step 2
+                            </p>
+                            <p class="description2"><b>Wait while we search</b> billions of records <br>in just 60 seconds</p>
+                            <img src="https://www.checkthem.com/static.v4/images/home/step2.png" width=250 height=150 />
+                            </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col">
+                        <div class="column">
+                            <!--<div class="img-container">
+                                <img class="img-responsive center-block" src="lp/static.v3/images/home/stadistics.svg" alt="" title=""></img>
+                            </div>-->
+                            <p class="description">
+                                 Step 3
+                            </p>
+                            <p class="description2"><b>View the background report</b><br> & see if they can be trusted!</p>
+                            <img src="https://www.checkthem.com/static.v4/images/home/step3.png" width=200 height=150 />
+                        </div>
+                    </div>
+
+
+            <div class="col-xs-12">
+            <div class="container">
+                <div class="title-container col-xs-12">
+                    <p class="description3">Full Background Information... Online</p>
+                </div>
+                <div class="col-xs-12 clear-padding flex">
+                    <div class="col-xs-12 col-sm-4 align-right">
+                        <p class="report-info">Contact Information</p>
+                        <p class="report-info">Relatives</p>
+                        <p class="report-info">Address History</p>
+                        <p class="report-info">Arrest Records</p>
+                        <p class="report-info">Civil Courts Records</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 text-center">
+                        <div class="img-container">
+                            <img class="img-responsive center-block" src="https://www.checkthem.com/static.v4/images/home/report.jpg" alt="" title=""></img>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <p class="report-info">Location</p>
+                        <p class="report-info">Marriage/Divorce Records</p>
+                        <p class="report-info">Social Media</p>
+                        <p class="report-info">Property Records</p>
+                        <p class="report-info">Bankrupcies/Liens</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+                    <!--old <div class="col-xs-12 col-sm-4 col">
+                        <div class="column">
+                            <div class="img-container">
+                                <img class="img-responsive center-block" src="lp/static.v3/images/home/tablet.svg" alt="" title=""></img>
+                            </div>
+                            <p class="description">iOS or Android?</br>You can take us to go.</p>
+                        </div>
+                    </div>-->
+                </div>
+            </div> 
+        </div>
+       <!--<hr>
+          <div class="container information-container panel">
+            <div class="col-xs-12 clear-padding general-info">
+                <div class="columns col-xs-12">
+                    <div class="col-xs-12 col-sm-12 col">
+                    <div class="column">
+                        <p style="font-size:30px;"></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="columns col-xs-12">
+                    <div class="col-xs-12 col-sm-4 col">
+                        <div class="column">
+                            <p class="descriptionbody2">Social Media Profiles</p>
+                            <p class="descriptionbody2">Contact Information</p>
+                            <p class="descriptionbody2">Marriage Records</p>
+                            <p class="descriptionbody2">Phone Numbers</p>
+                            <p class="descriptionbody2">Addresses</p>
+                            <p class="descriptionbody2">Relatives</p>
+                        </div>
+                    </div>
+                     <div class="col-xs-12 col-sm-4 col">
+                        <div class="column">
+                            <p class="descriptionbody2">Traffic Offenses</p>
+                            <p class="descriptionbody2">Sexual Offenses</p>
+                            <p class="descriptionbody2">Misdemeanors</p>
+                            <p class="descriptionbody2">Mugshots</p>
+                            <p class="descriptionbody2">Felonies</p>
+                            <p class="descriptionbody2">Arrests</p>
+                        </div>
+                    </div>
+                       <div class="col-xs-12 col-sm-4 col">
+                        <div class="column">
+                            <p class="descriptionbody2">Civil Records</p>
+                            <p class="descriptionbody2">Property Data</p>
+                            <p class="descriptionbody2">Bankrupcies</p>
+                            <p class="descriptionbody2">Mortgages</p>
+                            <p class="descriptionbody2">Lawsuits</p>
+                            <p class="descriptionbody2">& more</p>
+                        </div>
+                    </div>
+
+                    </div>-->
+                </div>
+              </div>
+        </div>
+
+    
+    <!-- footer -->
+
+    <div id='footer' class="footer col-xs-12 clear-padding">
+        <div class="second">
+            <div class="container">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/about-us.html">About Checkthem</a></li>
+                    <li class="division hidden-xs"><span>|</span></li>
+                    <li><a href="/lp/static.v3/">Legal</a></li>
+                    <li class="division hidden-xs"><span>|</span></li>
+                    <li class="copy"><span class="copyright">&copy; Checkthem - All Rights Reserved.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+        { (i[r].q=i[r].q||[]).push(arguments)}
+        ,i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-69805600-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+
+    </div>
+
+    <!-- /footer -->
+
+    <script src="lp/static.v3/js/jquery.js"></script>
+    <script src="lp/static.v3/js/bootstrap.min.js"></script>
+    <script src="lp/static.v3/js/home.js"></script>
+   </body>
+</html>

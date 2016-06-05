@@ -1,0 +1,58 @@
+
+<div class="search-one modal-body">
+	<div class="text-center">
+	    <h1 class="modal-title">SEARCHING BILLIONS OF RECORDS</h1>
+	    <h5 class="modal-subtitle">PLEASE BE PATIENT WHILE WE CHECK BILLIONS OF PUBLIC RECORDS.</h5>
+	</div>
+	<div class="progress-container">
+		<uib-progressbar class="progress-striped active" value="barValue" type="success">
+			<img class="magnifying-glass" src="../images/magnifying-glass.svg"></img>
+			<span class="percent">{{barValue}}%</span>
+		</uib-progressbar>
+	</div>
+	<div class="row">
+	    <div class="col-xs-12">
+	    	<div class="col-md-2 col-md-offset-2 col-sm-4 col-xs-12">
+	    		<h3 class="text-center">Criminal</h3>
+	    		<div class="col-xs-12 clear-padding text-center">
+	    			<span class="icon icon-handcuffs"></span>
+	    		</div>
+    			<ul class="features-list col-xs-12 clear-padding center-block">
+		    		<li ng-repeat="feature in features[0]" class="col-xs-12 clear-padding">
+		    			<div ng-class="{'invisible': feature.ready}" class="spinner-loader"></div>
+		    			<span ng-class="{'invisible': !feature.ready}" class="item-ready glyphicon glyphicon-ok"></span>
+		    			<span> {{feature.description}}</span>
+		    		</li>
+	    		</ul>
+	    	</div>
+
+	    	<div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+	    		<h3 class="text-center">Public</h3>
+	    		<div class="col-xs-12 clear-padding text-center">
+	    			<span class="icon icon-personInfo"></span>
+	    		</div>
+	    		<ul class="features-list col-xs-12 clear-padding center-block">
+		    		<li ng-repeat="feature in features[1]" class="col-xs-12 clear-padding">
+		    			<div ng-class="{'invisible': feature.ready}" class="spinner-loader"></div>
+		    			<span ng-class="{'invisible': !feature.ready}" class="item-ready glyphicon glyphicon-ok"></span>
+		    			<span> {{feature.description}}</span>
+		    		</li>
+	    		</ul>
+	    	</div>
+
+	    	<div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+	    		<h3 class="text-center">Personal</h3>
+	    		<div class="col-xs-12 clear-padding text-center">
+	    			<span class="icon icon-clipboard"></span>
+	    		</div>
+	    		<ul class="features-list col-xs-12 clear-padding center-block">
+		    		<li ng-repeat="feature in features[2]" class="col-xs-12 clear-padding">
+		    			<div ng-class="{'invisible': feature.ready}" class="spinner-loader"></div>
+		    			<span ng-class="{'invisible': !feature.ready}" class="item-ready glyphicon glyphicon-ok"></span>
+		    			<span> {{feature.description}}</span>
+		    		</li>
+	    		</ul>
+	    	</div>
+	    </div>
+	</div>
+</div>

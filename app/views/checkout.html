@@ -1,0 +1,319 @@
+<div class="checkout">
+  <div id="search" class="jumbotron">
+    <div class="container text-center">
+      <img class="img-responsive logo" src="../app/images/logo.svg">
+    </div>
+  </div>
+  <div class="container information-container">
+    <h1 class="title text-center small-title">Background Report Ready! Please Create Your Account To Open It:</h1>
+    <div class="col-sm-6">
+      <div class="panel panel-default avatar" ng-if="isPersonSearch">
+        <div class="panel-body">
+          <div class="avatar-info col-sm-8 col-xs-12 clear-padding">
+            <div class="personal-info">
+              <img class="img-responsive avatar" src="../images/yeoman.png">
+              <div class="information">
+                <p class="line-info"><span class="emp">Name:</span> {{ person.name }}</p>
+                <p class="line-info"><span class="emp">Age:</span> {{ person.age }}</p>
+                <p class="line-info"><span class="emp">Location:</span> {{ person.location }}</p>
+              </div>
+            </div>
+            <!--<img class="img-responsive map" src="../images/yeoman.png">-->
+          </div>
+          <div class="map-container col-sm-4 col-xs-12 clear-padding">
+            <div map-lazy-load="https://maps.google.com/maps/api/js"
+              map-lazy-load-params="{{googleMapsUrl}}">
+              <ng-map center="{{mapPosition}}" zoom="7" style="height: 100px;"></ng-map>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default avatar" ng-if="isPhoneSearch">
+        <div class="panel-body">
+          <div class="avatar-info col-sm-8 col-xs-12 clear-padding">
+            <div class="personal-info">
+              <div class="information">
+                <p class="line-info"><span class="emp">Owner Phone:</span> {{ person.phone }}</p>
+                <p class="line-info"><span class="emp">Owner Name:</span> <span class="blurry-text">Confidential Info</span></p>
+                <p class="line-info"><span class="emp">Owner Address:</span> <span class="blurry-text">1 Main Str</span></p>
+                <p class="line-info"><span class="emp">Owner City:</span> {{ person.city }}</p>
+                <p class="line-info"><span class="emp">Owner State:</span> {{ person.state }}</p>
+                <p class="line-info">Phone Number History: Available</p>
+                <p class="line-info">+ {{recordsAvailable}} other records available</p>
+              </div>
+            </div>
+            <!--<img class="img-responsive map" src="../images/yeoman.png">-->
+          </div>
+          <div class="map-container col-sm-4 col-xs-12 clear-padding">
+            <img class="img-responsive avatar center-block" src="../app/images/phone.png">
+            <div map-lazy-load="https://maps.google.com/maps/api/js"
+              map-lazy-load-params="{{googleMapsUrl}}">
+              <ng-map center="{{mapPosition}}" zoom="7" style="height: 100px;"></ng-map>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default avatar" ng-if="isAddressSearch">
+        <div class="panel-body">
+          <div class="avatar-info col-sm-8 col-xs-12 clear-padding">
+            <div class="personal-info">
+              <div class="information">
+                <p class="line-info"><span class="emp">Owner Address:</span> {{ person.address }}</p>
+                <p class="line-info"><span class="emp">Owner Name:</span> <span class="blurry-text">Confidential Info</span></p>
+                <p class="line-info"><span class="emp">Owner Phone:</span> <span class="blurry-text">123-456-7890</span></p>
+                <p class="line-info"><span class="emp">Owner City:</span> {{ person.city }}</p>
+                <p class="line-info"><span class="emp">Owner State:</span> {{ person.state }}</p>
+                <p class="line-info">Property Assessment: Available</p>
+                <p class="line-info">+ {{recordsAvailable}} other records available</p>
+              </div>
+            </div>
+            <!--<img class="img-responsive map" src="../images/yeoman.png">-->
+          </div>
+          <div class="map-container col-sm-4 col-xs-12 clear-padding">
+            <img class="img-responsive avatar center-block" src="../app/images/property.png">
+            <div map-lazy-load="https://maps.google.com/maps/api/js"
+              map-lazy-load-params="{{googleMapsUrl}}">
+              <ng-map center="{{mapPosition}}" zoom="7" style="height: 100px;"></ng-map>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel alert-information col-xs-12 clear-padding" ng-if="!isAddressSearch">
+        <div class="panel-header">
+          <h3 class="alert-title"><span class="icon icon-caution"></span> Alerts Found!</h3>
+          <div class="alerts-icons">
+            <span ng-repeat="alert in alerts" class="icon" ng-class="alert.icon"><span class="badge">{{alert.value}}</span></span>
+          </div>
+        </div>
+        <hr class="line">
+        <div class="information">
+          <p>We Detected 4 Severe Warnings Possibly Associated With {{ person.name }}. Proceed With Caution.</p>
+        </div>
+      </div>
+      <div class="details-info col-xs-12 clear-padding" ng-if="!isAddressSearch">
+        <div class="header-info">
+          <h3 class="details-title">Information Found!</h3>
+          <hr class="line">
+        </div>
+        <p class="feature col-xs-6">
+          <span class="glyphicon glyphicon-ok"></span>Traffic Ticket
+        </p>
+        <p class="feature col-xs-6">
+          <span class="glyphicon glyphicon-ok"></span>Sex Offenders
+        </p>
+        <p class="feature col-xs-6">
+          <span class="glyphicon glyphicon-ok"></span>Licenses
+        </p>
+        <p class="feature col-xs-6">
+          <span class="glyphicon glyphicon-ok"></span>Arrest
+        </p>
+        <p class="feature col-xs-6">
+          <span class="glyphicon glyphicon-ok"></span>Records
+        </p>
+        <p class="feature col-xs-6">
+          <span class="glyphicon glyphicon-ok"></span>Divorce Records
+        </p>
+        <p class="feature col-xs-6">
+          <span class="glyphicon glyphicon-ok"></span>Partners &amp; Associates
+        </p>
+        <p class="feature col-xs-6">
+          <span class="glyphicon glyphicon-ok"></span>Personal Information
+        </p>
+        <p class="feature col-xs-6">
+          <span class="glyphicon glyphicon-ok"></span>Related Persons
+        </p>
+        <p class="feature col-xs-6">
+          <span class="glyphicon glyphicon-ok"></span>Address History
+        </p>
+        <p class="feature col-xs-6">
+          <span class="glyphicon glyphicon-ok"></span>Marriage Records
+        </p>
+      </div>
+
+      <!--Desktop only-->
+      <div class="logos panel text-center hidden-xs col-xs-12 clear-padding">
+        <span class="text-light">Background checks have been seen on:</span>
+        <img class="img-responsive center-block img-logos" src="../images/checkout/pricing.png">
+      </div>
+      <div class="panel text-left testimonials hidden-xs col-xs-12">
+        <h3 class="testimonials-title">What Our Customers Are Saying...</h3>
+        <p class="testimonial">"I found out my daughter's boyfriend went to JAIL for ASSAULT. We were very cautious and able to get my daughter away from him. Thank you so much!"</p>
+        <p class="author">-Barbara, Texas</p>
+        <p class="testimonial">"I ran a search on myself. Wow! I'm surprised how much of my past comes up"</p>
+        <p class="author">-Curtis, California</p>
+        <p class="testimonial">"This new guy I met seemed perfect. I ran a search on him to be safe. I found out he's been in lot of trouble with the law. No thanks!"</p>
+        <p class="author">-Kate, Florida</p>
+      </div>
+      <div class="panel satisfaction hidden-xs">
+        <h3 class="satisfaction-title">Your Satisfaction is Important to Us!</h3>
+        <p class="paragraph">If at any time you are dissatisfied with our product, call our Member Care number at 800-410-3722 and we'll do our best to make you happy.</p>
+        <img class="img-responsive center-block img-logos" src="../images/checkout/certi.png">
+      </div>
+
+    </div>
+    <div class="col-sm-6 princing">
+      <div class="panel panel-default col-xs-12">
+        <!--<div class="panel-heading">
+          <h3 class="pricing-title">Step 1: Pick your Plan</h3>
+        </div>-->
+        <div class="panel-body">
+          <div class="top panel-element col-xs-12 clear-padding">
+            <h3 class="font-medium-s">Unlimited Reports - $1.95 for 2 Days</h3>
+            <p class="paragraph">You can run background checks on as many people you want as often as you want! Your searches are always 100% anonymous.</p>
+          </div>
+          <!--<div class="package panel-element col-xs-12 clear-padding" ng-repeat="package in PACKAGES" ng-class="{'active': package.selected}" ng-click="selectPackage(package)">
+            <div class="left">
+              <h3 class="recommended font-medium-s">
+                <span class="glyphicon" ng-class="{'icon-circle': !package.selected, 'glyphicon-record': package.selected}"></span> 
+                {{package.title}}
+              </h3>
+              <h5 class="paragraph">{{package.subtitle}}</h5>
+            </div>
+            <div class="right">
+              <h3 class="price font-medium-s">{{package.price}}</h3>
+              <span class="button-green paragraph" ng-if="package.selected">Most Popular</span>
+            </div>
+          </div>-->
+        </div>
+        <div class="panel-heading">
+          <h3 class="pricing-title">Create Your Account</h3>
+        </div>
+        <div class="panel-body">
+          <div class="form col-xs-12 clear-padding">
+            <form>
+              <div class="form-group" ng-class="{'empty-field' : empty.first_name}">
+                <label class="label-hidden" for="FirstName">Your First Name</label>
+                <input type="text" id="FirstName" class="form-control" placeholder="First Name" ng-model="checkout.first_name" ng-change="checkInput('first_name')">
+                <p class="error" ng-if="errors.first_name">{{errors.first_name}}</p>
+              </div>
+              <div class="form-group" ng-class="{'empty-field' : empty.last_name}">
+                <label class="label-hidden" for="LastName">Your Last Name</label>
+                <input type="text" id="LastName" class="form-control" placeholder="Last Name" ng-model="checkout.last_name" ng-change="checkInput('last_name')">
+                <p class="error" ng-if="errors.last_name">{{errors.last_name}}</p>
+              </div>
+              <div class="form-group" ng-class="{'empty-field' : empty.email}">
+                <label class="label-hidden" for="Email">Your Email</label>
+                <input type="email" id="Email" class="form-control" placeholder="Email" ng-model="checkout.email" ng-change="checkInput('email')">
+                <p class="error" ng-if="errors.email">{{errors.email}}</p>
+              </div>
+              <!--<div class="form-group address" ng-class="{'empty-field' : empty.address}">
+                <label class="label-hidden" for="Address">Address</label>
+                <input id="addressField" id="Address" type="text" class="form-control" placeholder="Address" ng-model="checkout.address" ng-change="checkInput('address')">
+                <p class="error" ng-if="errors.address">{{errors.address}}</p>
+              </div>-->
+              <div class="form-group" ng-class="{'empty-field' : empty.zip}">
+                <label class="label-hidden" for="ZIPField">Your Zip Code</label>
+                <input id="ZIPField" id="ZIP" type="text" class="form-control" placeholder="Zip Code" ng-model="checkout.zip" ng-change="checkInput('zip')">
+                <p class="error" ng-if="errors.zip">{{errors.zip}}</p>
+              </div>
+              <div class="form-group credit-card">
+                <img class="credit-cards" src="../images/payment_cards2.png" class="img-responsive"></img>
+              </div>
+              <div class="form-group" ng-class="{'empty-field' : empty.credit_card}">
+                <label class="label-hidden" for="CreditCard">Credit Card</label>
+                <input type="text" id="CreditCard" class="form-control" placeholder="Credit Card #" ng-model="checkout.credit_card" ng-change="checkInput('credit_card')">
+                <p class="error" ng-if="errors.credit_card">{{errors.credit_card}}</p>
+              </div>
+              <div class="car-exp">
+                <div class="col-xs-12 clear-padding">
+                  <div class="col-sm-4 col-lg-4">
+                    <label class="text-regular" for="card-exp">Exp. Date</label>
+                  </div>
+                  <div class="col-sm-4 col-sm-offset-4 col-lg-4 col-lg-offset-4 hidden-xs hidden-md">
+                    <label class="text-regular" for="card-cvv">CVV</label>
+                  </div>
+                </div>
+                <div class="car-exp-col form-group col-xs-12 col-sm-10 col-md-8 col-lg-4">
+                  <select id="card-exp" class="form-control" ng-model="checkout.exp_month" ng-options="value for value in months">
+                  </select>
+                  <p class="error" ng-if="errors.email">{{errors.exp_month}}</p>
+                </div>
+                <div class="car-exp-col form-group col-xs-12 col-sm-10 col-md-8 col-lg-4">
+                  <select id="card-exp-year" class="form-control" ng-model="checkout.exp_year" ng-options="value for value in years">
+                  </select>
+                  <!--<select id="card-exp-year" class="form-control" ng-model="checkout.exp_year">
+                    <option>YEAR</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                  </select>-->
+                  <p class="error" ng-if="errors.email">{{errors.exp_year}}</p>
+                </div>
+                <div class="col-xs-12 visible-xs visible-sm visible-md">
+                  <label class="text-regular" for="card-cvv">CVV</label>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                  <div class="cvv">
+                    <div class="cvv-field form-group">
+                      <input type="text" class="form-control" ng-model="checkout.cvv">
+                    </div>
+                    <div class="">
+                      <a href="#" tooltip-placement="bottom" tooltip-append-to-body="true" uib-tooltip-template="'infoTemplate.html'"><img class="secure-image img-responsive" src="../images/checkout/info.png"></img></a>
+                    </div>
+                  </div>
+                  <p class="error error-cvv" ng-if="errors.cvv">{{errors.cvv}}</p>
+                </div>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="" ng-model="checkout.first_check">
+                  I agree to the Terms and Conditions. I am not using this report to screen employees or tenants.
+                </label>
+                <p class="error error-check" ng-if="errors.first_check">{{errors.first_check}}</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="errors-container">
+        <ul>
+          <li class="error" ng-repeat="error in errorsRespond">{{error}}</li>
+        </ul>
+      </div>
+      <div class="button-container col-xs-12 clear-padding text-center">
+        <button type="submit" ng-click="processPayment()" class="btn btn-success center-block" ng-show="!showSpinner">
+          OPEN REPORT
+        </button>
+        <span us-spinner spinner-key="spinner-1"></span>
+        <span class="wait paragraph text-center" ng-show="showSpinner">Please wait</span>
+      </div>
+
+      <!--Mobile only-->
+      <div class="logos panel text-center visible-xs col-xs-12 clear-padding">
+        <span class="text-light">Background checks have been seen on:</span>
+        <img class="img-responsive center-block img-logos" src="../images/checkout/pricing.png">
+      </div>
+      <div class="panel text-left testimonials visible-xs col-xs-12 clear-padding">
+        <h3 class="testimonials-title">What Our Customers Are Saying...</h3>
+        <p class="testimonial">"After I ran a background check on my neighborhood and turns out there is 1 sex offender living across the street."</p>
+        <p class="author">- Jamie C.</p>
+        <p class="testimonial">"I checked to see if my boyfriend is being honest... Guess what? I found his dating profile. "</p>
+        <p class="author">- Alyssa M.</p>
+        <p class="testimonial">"I found my long lost step-father and his entire side of the family. Thank you."</p>
+        <p class="author">- Matt S.</p>
+      </div>
+      <div class="panel satisfaction visible-xs col-xs-12 clear-padding">
+        <h3 class="satisfaction-title">Your Satisfaction is Important to Us!</h3>
+        <p>If at any timey you are dissatisfied with our product, call our Member Care number at 800-222-8985 and we'll do everything we can to make you happy.</p>
+        <img class="img-responsive center-block img-logos" src="../images/checkout/certi.png">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/ng-template" id="infoTemplate.html">
+  <img class="img-responsive" src="../images/checkout/cvv_code2.jpg"></img>
+</script>
+
+<info-spy-footer></info-spy-footer>

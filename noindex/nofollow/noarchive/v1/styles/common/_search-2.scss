@@ -1,0 +1,41 @@
+.search-two {
+	.icon {
+		margin-top: 20px;
+		font-size: 75px;
+		color: lighten($color-green, 10%);
+	}
+
+	.person-name {
+		text-align: center;
+
+		@media screen and (min-width: $break-small) {
+			text-align: left;
+		}
+	}
+
+	.line {
+		border: 1px solid $color-gray;
+	}
+
+	.icons-container {
+		margin: 10px 0;
+
+		.icon-container {
+			display: block;
+			float: left;
+			position: relative;
+			margin: 10px 35px;
+		}
+	}
+
+	.spinner-loader {
+		font-size: 11px;
+	}
+
+	.social-network-icon {
+    	font-size: 30px;
+    	position: absolute;
+    	left: -2px;
+    	top: -1px;
+    }
+}

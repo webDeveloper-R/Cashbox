@@ -1,0 +1,40 @@
+<div class="login-page">
+  <info-spy-header></info-spy-header>
+  <div class="container">
+    <div class="jumbotron col-sm-6 col-sm-offset-3 text-center">
+      <div class="header-container">
+        <h1 class="title">Login</h1>
+        <div class="border-bottom"></div>
+      </div>
+      <form ng-submit="login()">
+        <div class="form-group" ng-class="{'has-error': user.email.error}">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="email" class="form-control font-small" id="exampleInputEmail1" placeholder="Email" ng-model="user.email.value" ng-enter="login()">
+          </div>
+          <p class="error" ng-if="user.email.error">{{user.email.error}}</p>
+        </div>
+        <div class="form-group" ng-class="{'has-error': user.password.error}">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="password" class="form-control font-small" id="exampleInputPassword1" placeholder="Password" ng-model="user.password.value" ng-enter="login()">
+          </div>
+          <p class="error" ng-if="user.password.error">{{user.password.error}}</p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="" ng-model="user.persistent_login.value">
+             Keep me signed in
+          </label>
+          <p class="error error-check" ng-if="user.persistent_login.error">{{user.persistent_login.error}}</p>
+        </div>
+        <button type="submit" class="login-btn btn btn-lg btn-success paragraph">Login</button>
+      </form>
+
+      <div class="links">
+        <a href="http://members.playclick.net/forgot-password" class="forgot-link paragraph">Forgot password?</a>
+        <a href="/sign-up.html" class="not-registered-link paragraph">Not yet registered?</a>
+      </div>
+    </div>
+  </div>
+</div>

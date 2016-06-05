@@ -1,0 +1,100 @@
+.login-page {
+	min-height: 100vh;
+	background: url(../images/login-bg.jpg) repeat center top;
+
+	.header {
+		
+		.logo {
+			position: absolute;
+
+			@media screen and (min-width: $break-small) {
+				position: initial;
+			}
+		}
+	}
+
+	.jumbotron {
+		margin-top: 70px;
+		background-color: $color-gray;
+		border-radius: 0;
+		padding: 30px 50px;
+	}
+
+	.header-container {
+		position: relative;
+		padding-bottom: 10px;
+		margin-bottom: 30px;
+
+		.border-bottom {
+			position: absolute;
+		    border-bottom: 2px solid;
+		    width: 15%;
+		    bottom: 0;
+		    left: 43%;
+		}
+	}
+
+	.title {
+		font-weight: $font-light;
+		font-size: $font-xtra-large;
+		margin-top: 0;
+	}
+
+	.form-group {
+    	padding: 2px;
+    	height: 60px;
+    	margin-bottom: 0px;
+    }
+
+    .input-group-addon {
+    	border-color: $color-light-blue-new;
+		border-right: none;
+		border-radius: 0;
+		background-color: $color-gray;
+		color: $color-dark-gray-new;
+    }
+
+    .form-control {
+		border-color: $color-light-blue-new;
+		border-left: none;
+		border-radius: 0;
+	}
+
+	.error {
+		font-size: 12px;
+		color: red;
+		background-color: transparent;
+	}
+
+	.login-btn {
+		background-color: $color-light-blue-new;
+		border-color: $color-light-blue-new;
+		padding: 5px 80px;
+	}
+
+	.links {
+		margin-top: 20px;
+
+		.forgot-link {
+			float: none;
+			display: block;
+
+			@media screen and (min-width: $break-small) {
+				float: left;
+			}
+		}
+
+		.not-registered-link {
+			float: none;
+			display: block;
+
+			@media screen and (min-width: $break-small) {
+				float: right;
+			}
+		}
+	}
+
+	.hidden-form {
+		display: none;
+	}
+}

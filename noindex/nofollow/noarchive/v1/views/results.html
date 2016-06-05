@@ -1,0 +1,73 @@
+<div class="results">
+  <div id="search" class="jumbotron">
+    <div class="container text-center">
+      <a href="/#/">
+        <img class="img-responsive logo center-block" src="../images/InfoSpy-logo.png">
+      </a>
+      <search-bar person="person"></search-bar>
+    </div>
+  </div>
+
+  <div class="container information-container">
+    <div class="header text-center">
+      <h2 class="title">We found <span class="highlight">{{results.length}}</span> results for "{{resultName}}"</h2>
+      <div class="subheader">
+        <span class="icon icon-multiple hidden-xs"></span>
+        <h4>Select a record below for detailed information</h4>
+      </div>
+    </div>
+  </div>
+  <div class="results-info">
+    <div class="container">
+
+      <div class="results table-responsive center-block hidden-xs">
+        <div class="arrow-down"></div>
+        <table class="table table-hover table-results">
+          <thead>
+            <tr>
+              <th class="text-center">Name</th>
+              <th class="text-center">Age</th>
+              <th class="text-center">Location</th>
+              <th class="text-center">Relatives</th>
+              <th class="text-center">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat="result in results">
+                <td class="emphasis text-center"><a href="#">{{result.first_name}} {{result.last_name}}</a></td>
+                <td class="emphasis text-center"><strong>{{result.age}}</strong></td>
+                <td class="text-center">{{result.state}}</td>
+                <td class="text-left"><span class="relative-info" ng-repeat="relative in result.relatives">{{relative.first_name}} {{relative.last_name}}</span></td>
+                <td class="text-center">
+                  <a class="btn btn-success" ng-click="getReport(result)">GET REPORT <span class="icon glyphicon glyphicon-search"></span></a>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="results visible-xs">
+        <div class="result col-xs-12 clear-padding" ng-repeat="result in results">
+          <div class="emphasis col-xs-8 clear-padding">
+            <a href="#">{{result.first_name}} {{result.last_name}}</a>
+          </div>
+          <div class="emphasis col-xs-4 clear-padding text-center">
+            <strong>{{result.age}}</strong>
+          </div>
+          <div class="col-xs-12 clear-padding">
+            <span>{{result.state}}</span>
+          </div>
+          <div class="col-xs-12 clear-padding">
+            <strong class="relative-info">Relatives:</strong>
+            <span class="relative-info" ng-repeat="relative in result.relatives">{{relative.first_name}} {{relative.last_name}}</span>
+          </div>
+          <div class="button-container col-xs-12 clear-padding">
+            <a class="btn btn-success center-block" ng-click="getReport(result)">GET REPORT <span class="icon glyphicon glyphicon-search"></span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>

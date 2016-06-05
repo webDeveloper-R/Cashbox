@@ -1,0 +1,36 @@
+.custom-search {
+	.tooltip-icon {
+		color: $color-light-blue-new;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.form-inline {
+		.form-control {
+			max-width: initial;
+
+			@media screen and (min-width: $break-small) {
+				max-width: 150px;
+			}
+		}
+
+		.input-small-width {
+			max-width: initial;
+
+			@media screen and (min-width: $break-small) {
+				max-width: 75px;
+			}
+		}
+	}
+
+	.btn {
+		margin-top: 20px;
+		width: 100%;
+
+		@media screen and (min-width: $break-small) {
+			width: initial;
+		}
+	}
+}

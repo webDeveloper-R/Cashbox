@@ -1,0 +1,39 @@
+.search-one {
+	.features-title {
+		font-weight: $font-regular;
+		vertical-align: middle;
+	}
+
+	.icon {
+		font-size: 30px;
+		color: $color-light-blue;
+	}
+
+	.features-list {
+		margin-top: 10px;
+		list-style-type: none;
+		text-align: center;
+
+		@media screen and (min-width: $break-small) {
+			text-align: left;
+		}
+
+		.element {
+			display: inline-flex;
+		}
+
+		.spinner-loader {
+			position: absolute;
+		}
+
+		.feature {
+			margin-bottom: 5px;
+		}
+
+		.item-ready {
+			color: lighten($color-green, 10%);
+			font-size: 14px;
+			margin-right: 5px;
+		}
+	}
+}

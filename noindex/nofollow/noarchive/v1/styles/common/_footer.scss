@@ -1,0 +1,86 @@
+.footer {
+	
+	.first {
+		background-color: $color-light-blue;
+
+		padding: 30px 0;
+
+		text-align: center;
+
+		color: $color-white;
+		
+		@media screen and (min-width: $break-small) {
+		    text-align: left;
+		}
+
+		.button {
+			margin-bottom: 10px;
+
+			.btn {
+				outline: none;
+				border-color: $color-white;
+				background-color: $color-light-blue;
+				color: $color-white;
+				min-width: 110px;
+			}
+		}
+
+		.contact-div {
+			margin-top: 10px;
+		}
+
+		.footer-link {
+			color: $color-white;
+			text-decoration: underline;
+
+			&:hover {
+				background-color: $color-light-blue;
+			}
+		}
+
+		.title-col {
+			margin-top: 0px;
+		}
+
+		.more-icon {
+			margin-top: 5px;
+			font-size: 30px;
+		
+		    &:hover {
+				cursor: pointer;
+		    }
+		}
+	}
+
+	.second {
+		background-color: $color-green;
+
+		padding: 20px 0;
+
+		color: $color-white;
+
+		text-align: center;
+
+		.credit-cards {
+			float: none;
+			display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+		    margin-bottom: 10px;
+
+			@media screen and (min-width: $break-small) {
+				float: left;
+				margin-bottom: 0;
+			}
+		}
+
+		.copyright {
+			text-align: center;
+			float: none;
+
+			@media screen and (min-width: $break-small) {
+				float: right;
+			}
+		}
+	}
+}

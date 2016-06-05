@@ -1,0 +1,122 @@
+.about-us-page {
+	.header {
+		min-height: 53px;
+
+		.logo {
+			position: absolute;
+
+			@media screen and (min-width: $break-small) {
+				position: initial;
+			}
+		}
+	}
+
+	.title-panel {
+		text-align: center;
+		font-size: $font-xtra-large;
+		font-weight: $font-light;
+		margin: 20px 0;
+
+		@media screen and (min-width: $break-small) {
+			margin: 60px 0;
+		}
+	}
+
+	.reason-panel {
+		background-color: $color-light-gray;
+
+		.emphasis {
+			color: $color-darker-gray;
+		}
+	}
+
+	.panel {
+		box-shadow: none;
+		background-color: transparent;
+		margin-bottom: 10px;
+
+		@media screen and (min-width: $break-small) {
+			margin-bottom: 50px;
+		}
+	}
+
+	.list {
+		padding: 35px 0;
+		position: relative;
+
+		.border-bottom {
+		    position: absolute;
+		    border-bottom: 2px solid;
+		    width: 15%;
+		    bottom: 0;
+		    left: 40%;
+		}
+
+		.list-title {
+			color: $color-light-blue-new;
+			text-decoration: underline;
+			font-weight: $font-regular;
+			font-size: $font-medium;
+			margin-bottom: 25px;
+		}
+
+		ul {
+			margin-top: 25px;
+		}
+
+		li {
+			list-style: none;
+			position: relative;
+			margin-bottom: 10px;
+		}
+
+		.glyphicon {
+			color: $color-green;
+			position: absolute;
+		    left: -10px;
+		    top: 3px;
+		}
+	}
+
+	.flex-container {
+
+		@media screen and (min-width: $break-small) {
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+		}
+
+		.panel {
+			flex-grow: 2;
+			flex-basis: 0;
+		}
+
+		.image-container {
+			display: flex;
+			flex-grow: 1;
+			flex-basis: 0;
+			margin: 0 30px;
+
+			position: relative;
+		}
+
+		.verticalLine {
+		    border-left: 2px solid #3E89EF;
+		    right: 50%;
+		    position: absolute;
+		    height: 100%;
+
+		    z-index: 0;
+		}
+
+		.img-responsive {
+			border: 2px solid $color-light-blue-new;
+		    border-radius: 100%;
+		    padding: 20px;
+
+		    align-self: center;
+		    z-index: 1;
+    		background-color: $color-white;
+		}
+	}
+}

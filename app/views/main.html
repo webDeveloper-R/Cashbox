@@ -1,0 +1,107 @@
+<!--<code>-->
+    <div ng-show-variant="none">
+      <div class="main-page">
+        <div id="search" class="jumbotron">
+          <info-spy-header></info-spy-header>
+          <div class="container text-center">
+            <div class="main-info fade-in one">
+              <h1 class="title">Search Public Records</h1>
+              <p class="font-medium-s text-light">People finder, background checks, search arrest records and more...</p>
+            </div>
+            <div class="fade-in one">
+              <search-bar></search-bar>
+            </div>
+            <div class="second-info fade-in two center-block">
+              <p><span class="quote">“ </span>I was shocked by what information I can dig up on people<span class="quote"> ”</span></p>
+              <p class="author">- Kate, California</p>
+            </div>
+          </div>
+          <div class="bottom-info">
+            <div class="container">
+              <span class="total-records">[ 30,542,485,245 ] <span class="lighter">Accessible Records</span></span>
+              <img class="logos img-responsive hidden-xs" src="../images/Brand_logos_homePage.png"></img>
+            </div>
+          </div>
+        </div>
+
+        <div class="container information-container panel">
+          <div class="col-xs-12 clear-padding general-info">
+            <div class="title-container col-xs-12">
+              <h2 class="title-panel">Why <span class="emphasis">InfoSpy</span>?</h2>
+            </div>
+            <div class="columns col-xs-12">
+              <div class="col-xs-12 col-sm-4 col">
+                <div class="column">
+                  <div class="img-container">
+                    <img class="img-responsive center-block" src="../images/home/img1.png" alt="" title=""></img>
+                  </div>
+                  <p class="img-title">Public Records</p>
+                  <p class="description">Search Public Records. We'll find people, address history, relatives, phone numbers, federal and court records, marriage and divorce records, and much more. InfoSpy collects data from billions of sources </p>
+                  <a href="#" class="read-more">Learn More <span class="glyphicon glyphicon-triangle-right"></span></a>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4 col">
+                <div class="column">
+                  <div class="img-container">
+                    <img class="img-responsive center-block" src="../images/home/img2.png" alt="" title=""></img>
+                  </div>
+                  <p class="img-title">Background Check</p>
+                  <p class="description">Run a Background Check. Find federal and state court records, police reports, sex offenders. Keep your family safe.</p>
+                  <a href="#" class="read-more">Learn More <span class="glyphicon glyphicon-triangle-right"></span></a>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4 col">
+                <div class="column">
+                  <div class="img-container">
+                    <img class="img-responsive center-block" src="../images/home/img3.png" alt="" title=""></img>
+                  </div>
+                  <p class="img-title">Arrest Records</p>
+                  <p class="description">Search Arrest Records. Discover the truth. Blablabla</p>
+                  <a href="#" class="read-more">Learn More <span class="glyphicon glyphicon-triangle-right"></span></a>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+
+        <div class="video-container">
+          <div class="container">
+            <div class="video-info">
+              <div class="title-container col-xs-12 col-sm-6">
+                <h2 class="title-panel">How <span class="emphasis">CheckThem</span> works?</h2>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div align="center" class="embed-responsive embed-responsive-16by9 center-block">
+                  <iframe width="420" height="315" src="https://www.youtube.com/embed/qLTdUvaMnaE" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container testimonials-container panel">
+          <div class="col-xs-12 clear-padding">
+            <div class="title-container col-xs-12">
+              <h2 class="title-panel">What Others <span class="emphasis">Found</span></h2>
+            </div>
+            <div class="col-xs-12 clear-padding">
+              <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+                <uib-slide ng-repeat="testimonialPair in testimonials" active="testimonial.active">
+                  <div class="carousel-caption">
+                    <div class="testimonial col-sm-6 col-xs-12" ng-repeat="testimonial in testimonialPair">
+                      <img class="img-responsive" ng-src="../images/testimonials/{{testimonial.image}}">
+                      <div>
+                        <p class="paragraph"><span class="quote">“ </span>{{testimonial.description}}<span class="quote"> ”</span></p>
+                        <p class="author">{{testimonial.author}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </uib-slide>
+              </uib-carousel>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <info-spy-footer></info-spy-footer>
+    </div>
+ <!--</code>-->

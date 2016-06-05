@@ -1,0 +1,41 @@
+.header {
+	background-color: $color-blue;
+
+	.phone {
+		display: block;
+		float: left;
+		padding: 15px 15px;
+
+		color: $color-white;
+		width: 100%;
+	}
+
+	.menu {
+		display: block;
+		float: none;
+
+		@media screen and (min-width: $break-small) {
+			float: right;
+		}
+	}
+
+	.navbar-default {
+		background-color: inherit;
+		border-color: transparent;
+		margin-bottom: 0;
+		min-height: 30px;
+
+	    .navbar-collapse {
+	    	border-color: transparent; 
+	    }
+
+	    li a {
+	    	color: $color-white;
+	    	padding: 15px 15px;
+
+	    	&:hover {
+	    		color: $color-white;
+	    	}
+	    }
+    }
+}

@@ -1,0 +1,65 @@
+.search-five {
+	.modal-header {
+		background-color: $color-light-red;
+		padding: 15px 40px;
+		text-align: center;
+
+		@media screen and (min-width: $break-small) {
+			text-align: left;
+		}
+
+		.title {
+			margin: 0;
+			font-size: $font-large;
+			font-weight: $font-light;
+			color: $color-white;
+		}
+
+		.emphasis {
+			color: $color-red;
+			font-weight: $font-regular;
+		}
+
+		.icon {
+			color: $color-red;
+		}
+	}
+
+	.modal-title {
+		margin-top: 20px;
+		font-weight: $font-regular;
+		font-size: $font-medium;
+	}
+
+	.modal-subtitle {
+		margin-top: 10px;
+		margin-bottom: 20px;
+		color: $color-light-blue;
+		display: block;
+	}
+
+	.paragraph {
+		margin-bottom: 30px;
+	}
+	
+	.btn-success {
+		background-color: $color-green;
+		padding: 10px 40px;
+		margin-bottom: 10px;
+		border: 8px double #FFF;
+		font-weight: $font-light;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:hover {
+	      background-color: darken($color-green, 10%);
+	    }
+
+		.icon {
+			margin-left: 5px;
+			font-size: 22px;
+		}
+	}
+}

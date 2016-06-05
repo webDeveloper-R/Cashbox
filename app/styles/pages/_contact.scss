@@ -1,0 +1,113 @@
+.contact {
+	.header {
+		min-height: 53px;
+
+		.logo {
+			position: absolute;
+		}
+
+		@media screen and (min-width: $break-small) {
+			position: initial;
+		}
+	}
+
+	.content {
+		display: block;
+		padding-top: 50px;
+		padding-bottom: 40px;
+	}
+
+	.header-container {
+		position: relative;
+		padding-bottom: 10px;
+
+		.border-bottom {
+			position: absolute;
+		    border-bottom: 2px solid;
+		    width: 15%;
+		    bottom: 0;
+		    left: 40%;
+		}
+	}
+
+	.title {
+		font-weight: $font-light;
+		font-size: $font-xtra-large;
+	}
+
+	.contact-information {
+		padding: 20px;
+		background-color: $color-light-gray;
+		margin-top: 40px;
+		max-width: 450px;
+
+		p {
+			font-size: 20px;
+			font-weight: $font-light;
+		}
+	}
+
+	.icon-container {
+		margin-top: 35px;
+		margin-bottom: 5px;
+	}
+
+	.icon {
+		color: $color-light-blue-new;
+		font-size: 24px;
+	}
+
+	.contact-form {
+		margin-top: 40px;
+	}
+
+	.form-group {
+		position: relative;
+	}
+
+	.form-control {
+		border-color: $color-light-blue-new;
+	}
+
+	textarea {
+    	resize: none;
+	}
+
+	.error {
+        font-size: 12px;
+        position: absolute;
+        background-color: white;
+        color: red;
+        width: initial;
+        padding-left: 0;
+    }
+
+    .btn-success {
+    	background-color: $color-light-blue-new;
+    	border-color: $color-light-blue-new;
+    	padding: 5px 50px;
+    	font-weight: $font-light;
+    }
+
+    .map-container {
+    	position: relative;
+    }
+
+    address {
+    	position: absolute;
+	    z-index: 1;
+	    top: 25%;
+	    left: 10%;
+	    background-color: rgba(62,137,239,0.9);
+	    color: white;
+	    padding: 35px;
+	    font-size: 16px;
+	    font-weight: $font-light;
+	    line-height: 24px;
+
+	    .address-title {
+	    	font-weight: $font-regular;
+	    	margin-top: 0;
+	    }
+    }
+}

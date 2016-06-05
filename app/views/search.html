@@ -1,0 +1,50 @@
+<div class="search">
+  <div class="header col-xs-12">
+    <div class="container">
+      <div class="col-xs-12 clear-padding">
+        <div class="logo">
+          <a>
+            <img class="img-responsive" src="../app/images/logo.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<info-spy-header></info-spy-header>-->
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="search-body">
+        <div class="text-center">
+            <h1 class="search-title small-title">Searching for: <span class="normal">{{person.firstname.value}} {{person.lastname.value}}</span></h1>
+            <h5 class="search-subtitle small-subtitle">We are searching billions of records. Please wait.</h5>
+        </div>
+        <div class="progress-container">
+          <uib-progressbar class="progress-striped active" value="barValue" type="success">
+            <img class="magnifying-glass" src="../images/magnifying-glass.png"></img>
+            <span class="percent">{{barValue}}%</span>
+          </uib-progressbar>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 testimonials">
+              <h3 class="text-center testimonial-title subtitle">What Others Say:</h3>
+              <div class="animate-if-container">
+                <div ng-repeat="testimonial in testimonials track by $index" ng-if="testimonial.isCurrent" class="animate-if">
+                  <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <div class="col-xs-4 col-sm-3 text-center">
+                      <img class="img-responsive photo center-block" ng-src="../images/testimonials/{{testimonial.img}}"></img>
+                    </div>
+                    <div class="description col-xs-8 col-sm-9 clear-padding">
+                      <div id="borderLeft"></div>
+                      <p class="testimonial paragraph"><span class="quote">“ </span>{{testimonial.description}}<span class="quote"> ”</span></p>
+                      <span class="person-info">{{testimonial.name}}</span>
+                      <span class="person-info">{{testimonial.city}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

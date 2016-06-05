@@ -1,0 +1,67 @@
+<div class="custom-search modal-border">
+	<div class="modal-body">
+		<div class="text-left">
+		    <h3 class="modal-title subtitle">Suggestions</h3>
+		    <ul>
+		    	<li class="paragraph">
+		    		Add a <strong>middle initial</strong> 
+		    		<a href="#" tooltip-placement="bottom" uib-tooltip="Add a middle initial to your search. For example, if their middle name is Diana, add D to the Middle Initial.">
+		    			<span class="tooltip-icon glyphicon glyphicon-info-sign"><span>
+		    		</a>
+		    	</li>
+		    	<li class="paragraph">
+		    		Add a <strong>previous or current city</strong> 
+		    		<a href="#" tooltip-placement="bottom" uib-tooltip="Do you know a previous or current city that this person has lived in? If so, add it to your search. For example, if you think they used to live in Los Angeles, add Los Angeles to the city.">
+		    			<span class="tooltip-icon glyphicon glyphicon-info-sign"><span>
+					</a>
+		    	</li>
+		    	<li class="paragraph">
+		    		Add a <strong>approximate age</strong> 
+		    		<a href="#" tooltip-placement="bottom" uib-tooltip="Do you know their approximate age? If you think you can guess within 10 years of their age, add it to your search. For example, if you think they are 30 years old, add 30 to Age.">
+		    			<span class="tooltip-icon glyphicon glyphicon-info-sign"><span>
+					</a>
+		    	</li>
+		    </ul>
+		</div>
+		<div class="row">
+			<!--Form fields: First, Middle Initial, Last, City, State, Age [SEARCH]-->
+		    <div class="col-xs-12 information">
+		    	<div id="search-bar" class="form-inline col-xs-12 clear-padding" role="form">
+		    		<div class="form-group" ng-class="{'has-error': person.firstname.error}">
+		    			<input id="first-name" type="text" ng-enter="search()" ng-model="person.firstname.value" class="form-control input-lg font-small" placeholder="First Name" autofocus>
+		    			<div class="arrow-up" ng-if="person.firstname.error"></div>
+		    			<p class="error" ng-if="person.firstname.error">{{person.firstname.error}}</p>
+				  	</div>
+				  	<div class="form-group" ng-class="{'has-error': person.middlename.error}">
+		    			<input id="middle-name" type="text" ng-enter="search()" ng-model="person.middlename.value" class="form-control input-lg input-small-width font-small" placeholder="Middle Name" autofocus>
+		    			<div class="arrow-up" ng-if="person.middlename.error"></div>
+		    			<p class="error" ng-if="person.middlename.error">{{person.middlename.error}}</p>
+				  	</div>
+				  	<div class="form-group" ng-class="{'has-error': person.lastname.error}">
+				  		<input type="text" ng-enter="search()" ng-model="person.lastname.value" class="form-control input-lg font-small" placeholder="Last Name">
+				  		<div class="arrow-up" ng-if="person.lastname.error"></div>
+				  		<p class="error" ng-if="person.lastname.error">{{person.lastname.error}}</p>
+					</div>
+					<div class="form-group" ng-class="{'has-error': person.age.error}">
+				  		<input type="text" ng-enter="search()" ng-model="person.age.value" class="form-control input-lg input-small-width font-small" placeholder="Age">
+				  		<div class="arrow-up" ng-if="person.age.error"></div>
+				  		<p class="error" ng-if="person.age.error">{{person.age.error}}</p>
+					</div>
+					<div class="form-group" ng-class="{'has-error': person.city.error}">
+				  		<input type="text" ng-enter="search()" ng-model="person.city.value" class="form-control input-lg font-small" placeholder="City">
+				  		<div class="arrow-up" ng-if="person.city.error"></div>
+				  		<p class="error" ng-if="person.city.error">{{person.city.error}}</p>
+					</div>
+				  	<div class="form-group" ng-enter="search()" ng-class="{'has-error': person.state.error}">
+				    	<select id="select-state" ng-model="person.state.value" ng-options="option for (key, option) in states" class="form-control input-lg font-small" change-on-keyup></select>
+				    	<div class="arrow-up" ng-if="person.state.error"></div>
+				    	<p class="error" ng-if="person.state.error">{{person.state.error}}</p>
+				  	</div>
+				</div>
+				<div class="form-group col-xs-12 clear-padding">
+			    	<button type="submit" class="btn btn-success btn-lg center-block paragraph" ng-click="search()">Submit Search &raquo;</button>
+			  	</div>
+		    </div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import 'bootstrap-sass-official/assets/stylesheets/_bootstrap.scss';
+// endbower
+
+/* Common Files */
+@import 'common/_variables.scss';
+@import 'common/_globals.scss';
+@import 'common/_header.scss';
+@import 'common/_footer.scss';
+@import 'common/_progress-bar.scss';
+@import 'common/_search-bar.scss';
+@import 'common/_search-1.scss';
+@import 'common/_search-2.scss';
+@import 'common/_search-3.scss';
+@import 'common/_search-4.scss';
+@import 'common/_search-5.scss';
+@import 'common/_search-results-modal.scss';
+@import 'common/social_media.scss';
+@import 'common/icons.scss';
+
+/* Pages */
+@import 'pages/_main.scss';
+@import 'pages/_results.scss';
+@import 'pages/_checkout.scss';
+@import 'pages/_login.scss';

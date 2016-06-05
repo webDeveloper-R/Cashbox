@@ -1,0 +1,40 @@
+
+<div class="search-three modal-body">
+	<div class="modal-header text-center col-xs-12">
+		<div class="col-lg-10 col-lg-offset-1 col-xs-12 header-container">
+		    <h2 class="modal-title"><span class="icon-check2"></span> Success, data found!</h1>
+		    <h3 class="subtitle"><span class="icon icon-folder2"></span> {{person.first_name}} {{person.last_name}}</h3>
+		</div>
+	</div>
+	<div class="progress-container col-xs-12 clear-padding">
+		<uib-progressbar class="progress-striped active" value="barValue" type="success">
+			<img class="magnifying-glass" src="../images/magnifying-glass.png"></img>
+			<span class="percent">{{barValue}}%</span>
+		</uib-progressbar>
+	</div>
+	<div class="row">
+	    <div class="information col-xs-12">
+	    	<div class="col-xs-12 text-center">
+	    		<p class="paragraph">We were able to locate information on <a class="name" href="#">{{person.first_name}} {{person.last_name}}</a>. Now downloading...</p>
+	    	</div>
+
+	    	<div class="features col-lg-10 col-lg-offset-1 col-xs-12 text-center">
+		    	<div ng-repeat="feature in features" class="feature col-sm-4 col-xs-6 text-left">
+		    		<div ng-class="{'invisible': !feature.loading}" class="spinner-loader"></div>
+		    		<span ng-class="{'invisible': !feature.ready}" class="icon glyphicon glyphicon-ok"></span>
+		    		<span class="text paragraph" ng-class="{'invisible': !feature.ready&&!feature.loading}">{{feature.description}}</span>
+		    	</div>
+		    </div>
+	    </div>
+	    <div class="col-xs-12">
+	    	<div class="col-sm-8 col-sm-offset-2 col-xs-12 text-center fadeIn" ng-class="{'hide-div': !searchReady}">
+			    <a ng-disabled="!searchReady" ng-click="nextStep()" class="btn btn-success">
+			    	<div>
+				    	<span class="paragraph">CONTINUE TO BACKGROUND REPORT</span>
+				    </div>
+			    </a>
+			    <span class="emphasis">Data Found, Click Continue</span>
+			</div>
+		</div>
+	</div>
+</div>

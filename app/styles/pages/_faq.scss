@@ -1,0 +1,36 @@
+.faq-page {
+	.header {
+		min-height: 53px;
+
+		.logo {
+			position: absolute;
+			
+			@media screen and (min-width: $break-small) {
+				position: initial;
+			}
+		}
+	}
+
+	.main-title {
+		margin: 50px 0;
+	}
+
+	.subtitle {
+		font-weight: $font-regular;
+		margin-top: 40px;
+		margin-bottom: 30px;
+	}
+
+	.question {
+		position: relative;
+		padding-bottom: 30px;
+
+		.border-bottom {
+		    position: absolute;
+		    border-bottom: 2px solid $color-light-blue-new;
+		    width: 10%;
+		    bottom: 0;
+		    left: 0;
+		}
+	}
+}

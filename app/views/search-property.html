@@ -1,0 +1,64 @@
+<div class="search">
+  <div class="container">
+    <div class="col-xs-12 clear-padding">
+      <div class="logo">
+        <a>
+          <img class="img-responsive" src="../images/logowhite.svg">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--<info-spy-header></info-spy-header>-->
+  <div class="container">
+    <div class="search-body">
+      <div class="text-center">
+          <h1 class="search-title small-title">SEARCHING FOR <span class="normal">'{{address.description}}'</span></h1>
+          <h5 class="search-subtitle small-subtitle">We are searching billions of records. Please wait.</h5>
+      </div>
+      <div class="progress-container">
+        <uib-progressbar class="progress-striped active" value="barValue" type="success">
+          <img class="magnifying-glass" src="../images/magnifying-glass.png"></img>
+          <span class="percent">{{barValue}}%</span>
+        </uib-progressbar>
+      </div>
+      <div class="row">
+          <div class="map-container col-xs-12">
+            <div map-lazy-load="https://maps.google.com/maps/api/js"
+              map-lazy-load-params="{{googleMapsUrl}}">
+              <ng-map center="{{mapPosition}}" zoom="{{mapZoom}}" style="height: 400px;">
+                <!--<shape name="circle" no-watcher="true"
+                  stroke-color="#FF0000"
+                  stroke-opacity="0.8"
+                  stroke-weight="2"
+                  fill-color="#FF0000"
+                  fill-opacity="0.35"
+                  center="{{mapPosition}}"
+                  radius="{{getRadius(circleRadius)}}"
+                  setRadius="{{getRadius(circleRadius)}}">
+                </shape>-->
+              </ng-map>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Google Code for Search results page Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1061441233;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "4W5nCPvN-GMQ0Z2R-gM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1061441233/?label=4W5nCPvN-GMQ0Z2R-gM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>

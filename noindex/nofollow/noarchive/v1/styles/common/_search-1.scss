@@ -1,0 +1,23 @@
+.search-one {
+	.icon {
+		font-size: 55px;
+	}
+
+	.features-list {
+		margin-top: 10px;
+		list-style-type: none;
+		margin-left: 35%;
+
+		@media screen and (min-width: $break-small) {
+			margin-left: 0;
+		}
+
+		.item-ready {
+			color: lighten($color-green, 10%);
+
+			font-size: 14px;
+			position: relative;
+			left: -20px;
+		}
+	}
+}

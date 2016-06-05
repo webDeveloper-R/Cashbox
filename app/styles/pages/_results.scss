@@ -1,0 +1,216 @@
+.results {
+  min-height: 100vh;
+  background-color: $color-light-gray;
+
+  #search-bar {
+    .form-group {
+      height: 40px;
+
+      @media screen and (min-width: $break-small) {
+        height: 57px;
+      }
+    }
+  }
+
+  .jumbotron {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: $color-blue;
+
+    .logo {
+      position: initial;
+      display: block;
+      float: none;
+      margin-top: 0px;
+      margin-bottom: 10px;
+
+      @media screen and (min-width: $break-medium) {
+        float: left;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .subheader {
+    font-weight: $font-light;
+  }
+
+  .information-container {
+    background-color: $color-light-gray;
+
+    .header {
+      margin: 20px 0;
+      padding-top: 10px;
+      background-color: transparent;
+    }
+
+    .title {
+      margin: 0;
+      color: $color-light-blue-new;
+      font-weight: $font-light;
+    }
+  }
+
+  .results-info {
+    background-color: $color-light-gray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    @media screen and (min-width: $break-small) {
+      padding-top: 0;
+    }
+
+    .emphasis {
+      font-size: 28px;
+      color: $color-light-blue;
+      line-height: 30px;
+      margin-bottom: 5px;
+
+      &.age {
+        color: inherit;
+      }
+
+      @media screen and (min-width: $break-small) {
+        font-size: 20px;
+        line-height: inherit;
+        margin-bottom: 0;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .different-line {
+      display: block;
+    }
+
+    .result {
+      background-color: $color-white;
+      margin-bottom: 10px;
+      padding: 10px;
+      text-align: left;
+
+      .name {
+        color: $color-light-blue;
+        cursor: pointer;
+      }
+      .background-info {
+        color: $color-dark-gray-new;
+      }
+    }
+
+    .relatives {
+      margin-top: 15px;
+    }
+
+    .button-container {
+      margin-top: 5px;
+    }
+  }
+
+  .table-results {
+    margin-top: 10px;
+    margin-bottom: 0;
+    background-color: $color-white;
+
+    thead {
+      background-color: $color-gray;
+
+      .name {
+        padding-left: 15px;
+      }
+    }
+    tbody {  
+      .name {
+        color: $color-light-blue;
+        padding-left: 15px;
+        cursor: pointer;
+      }
+      .background-info {
+        padding-left: 15px;
+        color: $color-dark-gray-new;
+      }
+
+      tr {
+        &:hover {
+          background-color: #e9f7ff;
+        }
+      }
+    }
+    td {
+      border-top: 5px solid $color-light-gray;
+      vertical-align: middle;
+    }
+  }
+
+  .btn-success {
+    background-color: $color-green;
+    border: none;
+    padding: 10px 40px;
+
+    &:hover {
+      background-color: darken($color-green, 10%);
+    }
+    
+    @media screen and (min-width: $break-small) {
+      display: inline-block;
+    }
+  }
+
+  .bottom-info {
+    margin: 50px 0 20px 0;
+    font-weight: $font-light;
+
+    a:hover {
+      cursor: pointer;
+    }
+  }
+
+
+  .tooltip-icon {
+    color: $color-light-blue-new;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .form-inline {
+    .form-control {
+      max-width: initial;
+
+      @media screen and (min-width: $break-small) {
+        max-width: 150px;
+      }
+    }
+
+    .input-small-width {
+      max-width: initial;
+
+      @media screen and (min-width: $break-small) {
+        max-width: 75px;
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 20px;
+    width: 100%;
+
+    @media screen and (min-width: $break-small) {
+      margin-top: 0;
+      width: initial;
+    }
+  }
+  
+  .error {
+    font-size: 12px;
+    background-color: transparent;
+    color: red;
+    width: initial;
+    padding-left: 0;
+  }
+}

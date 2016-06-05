@@ -1,0 +1,42 @@
+.search-results-modal {
+	.nav-justified {
+		display: none;
+	}
+
+	.modal-title {
+		font-weight: $font-light;
+		font-size: $font-large;
+		color: $color-white;
+	}
+	.modal-subtitle {
+		font-weight: $font-regular;
+		margin-bottom: 25px;
+		color: $color-white;
+		font-size: $font-medium-s;
+	}
+
+	.modal-header {
+		padding: 25px 0 0 0;
+		border-bottom: none;
+		background-color: $color-blue;
+	}
+
+	.modal-body {
+		padding: 0 0 25px 0;
+	}
+
+	.modal-footer {
+		background-color: #FFFF99;
+		color: #FF0000;
+		font-size: 16px;
+		border-color: $color-green;
+
+		.paragraph {
+			margin: 0;
+		}
+
+		.icon {
+			margin-right: 20px;
+		}
+	}
+}

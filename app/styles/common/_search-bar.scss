@@ -1,0 +1,80 @@
+#search-bar {
+  padding-top: 5px;
+  
+  .form-group {
+    padding: 3px;
+    position: relative;
+
+    @media screen and (min-width: $break-small) {
+      height: 75px;
+    }
+  }
+
+  .btn-success {
+    background-color: $color-light-blue-new;
+    border: none;
+
+    &:hover {
+      background-color: darken($color-light-blue-new, 10%);
+    }
+  }
+
+  .btn-small {
+    background-color: $color-light-blue-new;
+    color: $color-white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: $font-small;
+    cursor: pointer;
+    margin-top: 2px;
+
+    .icon {
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+    }
+  }
+
+  .error {
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+
+    @media screen and (min-width: $break-small) {
+      top: 71%;
+    }
+  }
+
+  .advice {
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: $color-light-blue-new;
+    margin-bottom: 0;
+    position: absolute;
+    top: -53px;
+    border-radius: 2px;
+    width: 98%;
+
+    @media screen and (min-width: $break-extra-small) {
+      top: -33px;
+    }
+
+    @media screen and (min-width: $break-small) {
+      top: -33px;
+      width: 170%;
+    }
+  }
+
+  .arrow-down.adv {
+    border-top: 7px solid $color-light-blue-new;
+    position: absolute;
+    top: -4px;
+    margin-left: 1%;
+
+    @media screen and (min-width: $break-small) {
+      top: -4px;
+    }
+  }
+}

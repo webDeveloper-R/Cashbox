@@ -1,0 +1,104 @@
+.search-three {
+	.header-container {
+		display: block;
+
+		@media screen and (min-width: $break-small) {
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+		}
+	}
+
+	.modal-title {
+		display: block;
+		float: none;
+		margin-bottom: 10px;
+	}
+
+	.subtitle {
+		color: $color-white;
+	}
+
+	.modal-subtitle {
+		text-align: none;
+		margin: 0;
+		color: $color-black !important;
+	}
+
+	.spinner-loader {
+		font-size: 4px;
+	}
+
+	.information {
+		padding-top: 30px;
+		padding-bottom: 30px;
+
+		.name {
+			color: $color-light-blue;
+			text-decoration: none;
+		}
+	}
+
+	.features {
+		margin-top: 10px;
+	}
+
+	.feature {
+		position: relative;
+		margin-bottom: 5px;
+
+		.icon {
+			position: absolute;
+	    	left: 16px;
+	    	color: $color-green;
+	    }
+
+	    .text {
+	    	margin-left: 5px;
+	    }
+	}
+
+	.fadeIn { 
+		transition: 1s ease-in-out opacity;
+		opacity: 1;
+		overflow: hidden;
+		height: auto;
+	}
+	.fadeIn.hide-div {
+		opacity: 0;
+		overflow: hidden;
+	}
+
+	.btn-success {
+		background-color: $color-green;
+		padding: 10px 40px;
+		margin-bottom: 10px;
+		border: 8px double #FFF;
+		font-weight: $font-light;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:hover {
+	      background-color: darken($color-green, 10%);
+	    }
+
+		&[disabled] {
+			background-color: $color-green;
+		}
+
+		.icon {
+			margin-left: 5px;
+			font-size: 22px;
+		}
+
+		span {
+			white-space: normal;
+		}
+	}
+
+	.emphasis {
+		color: red;
+	}
+}

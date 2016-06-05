@@ -1,0 +1,202 @@
+.search-four {
+	background-color: lighten($color-gray, 50%);
+
+	.modal-header {
+		background-color: $color-blue;
+		color: $color-white;
+		border-bottom: none;
+	}
+
+	.modal-title {
+		font-weight: $font-regular;
+	}
+
+	.modal-body {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.progress {
+		height: 90px;
+		border-radius: 0;
+		margin-top: 15px;
+
+		.progress-bar {
+			border-radius: 0;
+		}
+	}
+
+	.general-info {
+		position: absolute;
+		bottom: 0;
+		height: 90px;
+		padding: 0 40px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.left-info {
+			display: flex;
+			align-items: center;
+		}
+
+		.img-responsive {
+			max-width: 60px;
+			margin-right: 30px;
+		}
+	}
+	
+	.icon {
+		font-size: 75px;
+		color: $color-black;
+		margin-right: 20px;
+	}
+
+	.personal-info {
+		text-align: left;
+
+		.folder-icon {
+			
+			.img-responsive {
+				max-width: 60px;
+			}
+		}
+	}
+
+	.person-name {
+		text-align: left;
+		font-weight: $font-regular;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.line-info {
+		margin: 0;
+		font-weight: $font-light;
+	}
+
+	.line {
+		border: 1px solid $color-gray;
+	}
+
+	.tabs-container {
+		padding-top: 15px;
+
+		.tab-animation {
+			display: flex;
+			align-items: stretch;
+			background-color: $color-white;
+
+			li {
+				background-color: lighten($color-gray, 50%);
+				margin-top: 0;
+
+				a {
+					color: $color-black;
+					text-align: center;
+				}
+
+				&.active {
+					background-color: $color-white;
+					border: 1px solid $color-light-blue;
+					margin-right: 1px;
+
+					&:after {
+						content: "";
+						border: 1px solid $color-light-blue;
+						position: absolute;
+						right: -22px;
+						width: 21px;
+						top: 50%;
+					}
+				}
+			}
+		}
+
+		.tab-content {
+			border: 1px solid $color-light-blue;
+		    width: 100%;
+    		padding: 40px;
+
+    		display: flex;
+    		align-items: center;
+
+    		@media screen and (min-width: $break-small) {
+				width: 75%;
+			}
+
+			@media screen and (min-width: $break-medium) {
+				width: 80%;
+			}
+		}
+
+		.tab-info {
+			font-weight: $font-light;
+		}
+	}
+
+	.nav-stacked {
+		margin-right: 0;
+		margin-bottom: 10px;
+		display: none;
+
+		@media screen and (min-width: $break-small) {
+			margin-right: 20px;
+			margin-bottom: 0;
+			display: block;
+		}
+
+		.icon-tab {
+			font-size: 30px;
+			display: block;
+			color: $color-light-blue;
+		}
+
+		li {
+			text-align: center;
+
+			@media screen and (min-width: $break-small) {
+				text-align: left;
+			}
+		}
+
+		li.active a {
+			background-color: $color-white;
+			color: $color-black;
+		}
+	}
+
+	/* set reference point */
+	.tab-animation > .tab-content {
+	    position: relative;
+	}
+
+	/* set animate effect */
+	.tab-animation > .tab-content > .tab-pane{
+	    transition: 0.2s linear opacity;
+	}
+
+	/* overwrite display: none and remove from document flow */
+	.tab-animation > .tab-content > .tab-pane.active-remove {
+	    position: absolute;
+	    display: block;
+
+	    @media screen and (min-width: $break-medium) {
+	    	top: 20%;
+	    }
+
+	    @media screen and (min-width: $break-small) {
+	    	top: 33%;
+	    }
+	}
+
+	/* opacity=0 when removing "active" class */
+	.tab-animation > .tab-content > .tab-pane.active-remove-active {
+	    opacity: 0;
+	}
+
+	/* opacity=0 when adding "active" class */
+	.tab-animation > .tab-content > .tab-pane.active-add {
+	    opacity: 0;
+	}
+}

@@ -1,0 +1,79 @@
+<div class="results">
+  <div id="search" class="jumbotron">
+    <div class="container text-center">
+      <a href="/">
+        <img class="img-responsive logo center-block" src="../app/images/logo.svg">
+      </a>
+      <search-bar person="person"></search-bar>
+    </div>
+  </div>
+
+  <div class="information-container">
+    <div class="container">
+      <div class="header text-center">
+        <h2 class="title">We found <span class="emphasis">{{totalResults}}</span> results for <span class="emphasis">"{{resultName}}"</span></h2>
+        <h4 class="subheader small-subtitle"><strong>NEXT STEP: </strong>Pick a result that matches the person you are looking for. Click the "Get Report" button to view the report.</h4>
+      </div>
+    </div>
+  </div>
+  <div class="results-info">
+    <div class="container">
+
+      <div class="results-table table-responsive center-block hidden-xs">
+        <table class="table table-hover table-results">
+          <thead>
+            <tr>
+              <th class="name">Name</th>
+              <th class="text-center">Age</th>
+              <th>Location</th>
+              <th>Relatives</th>
+              <th class="text-left">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat="result in results">
+                <td class="emphasis text-left">
+                  <a class="name different-line" ng-click="getReport(result)">{{toTitleCase(result.names[0].first_name)}} {{toTitleCase(result.names[0].middle_name)}} {{toTitleCase(result.names[0].last_name)}}</a>
+                  <span class="paragraph background-info different-line font-smallest" ng-if="result.names.length > 1">Aliases:</span>
+                  <span class="paragraph background-info different-line font-smallest" ng-repeat="name in result.names track by $index" ng-if="$index >= 1">{{toTitleCase(name.first_name)}} {{toTitleCase(name.middle_name)}} {{toTitleCase(name.last_name)}}</span>
+                </td>
+                <td class="emphasis age text-center"><strong ng-if="result.age!==0">{{result.age}}</strong></td>
+                <td class="text-left paragraph"><span class="different-line" ng-repeat="address in result.addresses">{{toTitleCase(address.city)}}, {{address.state}}</span></td>
+                <td class="text-left paragraph"><span class="different-line font-smallest" ng-repeat="relative in result.relatives">{{toTitleCase(relative.first_name)}} {{toTitleCase(relative.last_name)}}</span></td>
+                <td class="text-left">
+                  <a class="btn btn-success paragraph" ng-click="getReport(result)">GET REPORT</a>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="results visible-xs">
+        <div class="result col-xs-12 clear-padding" ng-repeat="result in results">
+          <div class="emphasis col-xs-8 clear-padding">
+            <a class="name different-line" ng-click="getReport(result)">{{toTitleCase(result.names[0].first_name)}} {{toTitleCase(result.names[0].middle_name)}} {{toTitleCase(result.names[0].last_name)}}</a>
+            <span class="paragraph background-info different-line font-smallest" ng-if="result.names.length > 1">Aliases:</span>
+            <span class="paragraph background-info different-line font-smallest" ng-repeat="name in result.names track by $index" ng-if="$index >= 1">{{toTitleCase(name.first_name)}} {{toTitleCase(name.middle_name)}} {{toTitleCase(name.last_name)}}</span>
+          </div>
+          <div class="emphasis col-xs-4 clear-padding text-center">
+            <strong ng-if="result.age!==0">{{result.age}}</strong>
+          </div>
+          <div class="col-xs-12 clear-padding">
+            <span class="different-line paragraph" ng-repeat="address in result.addresses">{{toTitleCase(address.city)}}, {{address.state}}</span>
+          </div>
+          <div class="col-xs-12 clear-padding relatives">
+            <strong class="relative-info">Relatives:</strong>
+            <span class="different-line paragraph font-smallest" ng-repeat="relative in result.relatives">{{relative.first_name}} {{relative.last_name}}</span>
+          </div>
+          <div class="button-container col-xs-12 clear-padding">
+            <a class="btn btn-success center-block paragraph" ng-click="getReport(result)">GET REPORT <span class="icon glyphicon glyphicon-search"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="bottom-info font-medium-s">Can't find who you are looking for <a ng-click="openCustomSearch()">Click here for custom search</a></h4>
+
+    </div>
+  </div>
+</div>
+</div>

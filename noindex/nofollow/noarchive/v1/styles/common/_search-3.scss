@@ -1,0 +1,68 @@
+.search-three {
+	.modal-title {
+		display: block;
+		float: none;
+		color: $color-green;
+		margin-bottom: 10px;
+
+		@media screen and (min-width: $break-medium) {
+			float: left;
+		}
+	}
+
+	.modal-subtitle {
+		text-align: none;
+		font-size: 26px;
+		margin: 0;
+
+		@media screen and (min-width: $break-medium) {
+			float: right;
+		}
+	}
+
+	.spinner-loader {
+		font-size: 4px;
+	}
+
+	.information {
+		padding-top: 20px;
+		padding-bottom: 10px;
+
+		.name {
+			color: $color-light-blue;
+			text-decoration: underline;
+		}
+	}
+
+	.feature {
+		position: relative;
+
+		.icon {
+			position: absolute;
+	    	left: 16px;
+	    	color: $color-light-blue;
+	    }
+
+	    .text {
+	    	margin-left: 5px;
+	    }
+	}
+
+	.btn-success {
+		background-color: $color-green;
+		padding: 10px 40px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&[disabled] {
+			background-color: $color-green;
+		}
+
+		.icon {
+			margin-left: 5px;
+			font-size: 22px;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+
+<div class="search-two modal-body">
+	<div class="modal-header text-center col-xs-12">
+	    <h1 class="modal-title">Searching on Social Media...</h1>
+	    <h5 class="modal-subtitle">We are searching billions of records. Please wait.</h5>
+	</div>
+	<div class="progress-container col-xs-12 clear-padding">
+		<uib-progressbar class="progress-striped active" value="barValue" type="success">
+			<img class="magnifying-glass" src="../images/magnifying-glass.png"></img>
+			<span class="percent">{{barValue}}%</span>
+		</uib-progressbar>
+	</div>
+	<div class="row">
+	    <div class="col-xs-12 personal-info">
+	    	
+	    	<span class="icon icon-user"></span>
+
+	    	<div class="information">
+	    		<h3 class="person-name">{{person.first_name}} {{person.last_name}}</h3>
+	    		<p class="paragraph">We search social media profiles. This includes everything from Facebook to Dating Profiles. You may be shocked to find out what "{{person.first_name}} {{person.last_name}}" is doing in their secret life!</p>
+	    	</div>
+	    </div>
+	    <div class="col-xs-12">
+	    	<div class="col-xs-10 col-xs-offset-1 line"></div>
+
+	    	<div class="icons-container col-xs-12 text-center">
+		    	<div class="col-xs-12">
+		    		<div ng-repeat="social in socialNetworks" class="icon-container">
+			    		<div ng-class="{'invisible': social.ready}" class="spinner-loader"></div>
+			    		<span ng-class="[social.icon , {'invisible': !social.ready}]" class="social-network-icon"></span>
+			    		<p ng-class="{'invisible': !social.ready}" class="paragraph">{{social.name}}</p>
+			    	</div>
+		    	</div>
+		    </div>
+	    </div>
+	</div>
+</div>

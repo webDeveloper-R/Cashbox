@@ -1,0 +1,60 @@
+.thank-you {
+	.header {
+		min-height: 53px;
+
+		.logo {
+			position: initial;
+		}
+
+		@media screen and (min-width: $break-small) {
+			position: initial;
+		}
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.title {
+		margin-bottom: $font-large;
+	}
+
+	.icon {
+		color: $color-green;
+		font-size: 28px;
+		margin-right: 10px;
+	}
+
+	.sub-header {
+		font-size: $font-medium-s;
+		font-weight: $font-light;
+	}
+
+	.box {
+		margin-top: 20px;
+		padding: 15px;
+    	border: 1px solid $color-light-gray;
+
+    	.item {
+    		line-height: 28px;
+    	}
+	}
+
+	.button-container {
+		margin-top: 30px;
+		margin-bottom: 30px;
+
+		.btn {
+			width: 100%;
+		    border-radius: 0;
+		    font-size: 16px;
+		    border: 8px double #FFF;
+		    outline: 0;
+		    padding: 15px;
+		}
+	}
+
+	.footer {
+		margin-top: 30px;
+	}
+}

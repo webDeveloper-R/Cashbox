@@ -1,0 +1,31 @@
+<div class="thank-you">
+  <div class="header">
+    <div class="container text-center">
+      <img class="img-responsive logo" src="../app/images/logo.svg">
+    </div>
+  </div>
+  <div class="container content">
+    <div class="col-lg-offset-4 col-lg-4 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+
+      <h1 class="text-center title"><span class="icon icon-check2"></span>Approved!</h1>
+      <p class="sub-header"><strong>Your report is ready!</strong> Please write down your <strong>login credentials</strong> and store it in a <strong>safe area!</strong></p>
+      <div class="box">
+        <ul>
+          <li class="item paragraph">Order number: <strong>{{checkoutInfo.order_id}}</strong></li>
+          <li class="item paragraph">Username: <strong>{{checkoutInfo.username}}</strong></li>
+          <li class="item paragraph">Password: <strong>{{checkoutInfo.password}}</strong></li>
+        </ul>
+      </div>
+      <div class="button-container">
+        <form method="post" action="{{trustSrc(checkoutInfo.link)}}">
+          <input type="hidden" name="login" ng-value="checkoutInfo.username">
+          <input type="hidden" name="password" ng-value="checkoutInfo.password">
+          <input type="submit" value="Access Report" class="btn btn-success center-block paragraph">
+        </form>
+      </div>
+      <p class="text-center paragraph">We keep your information private.<br>No one will ever know you searched them</p>
+    </div>
+  </div>
+</div>
+
+<info-spy-footer></info-spy-footer>

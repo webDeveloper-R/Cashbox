@@ -1,0 +1,271 @@
+/**
+ * Colors
+ */
+
+
+/**
+ * Fonts
+ */
+
+//required by angular-ui-bootstrap
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.clear-padding {
+	padding: 0px;
+}
+
+.clear-padding-left {
+	padding-left: 0px;
+}
+
+.clear-padding-right {
+	padding-right: 0px;
+}
+
+.logo {
+	text-align: left;
+	max-width: 175px;
+
+	@media screen and (min-width: $break-small) {
+	    text-align: left;
+	}
+}
+
+.has-error {
+	.form-control {
+		border-color: red;
+		background-color: #FCF0F0;
+	}
+}
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    
+    border-bottom: 5px solid red;
+
+    margin-left: 7%;
+}
+
+.error {
+    font-size: 12px;
+    color: $color-white;
+    background-color: red;
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: 0px;
+
+    margin-left: 5%;
+    width: 90%;
+    border-radius: 3px;
+}
+
+/**
+ * JS disabled
+ */
+.no-javascript {
+	margin-top: 10px;
+}
+
+/**
+ * PROGRESS BAR
+ */
+.progress-container {
+	padding-top: 15px;
+	padding-left: 70px;
+	padding-right: 70px;
+	padding-bottom: 30px;
+
+	background-color: #EAE9E9;
+	-webkit-box-shadow: 0px 8px 14px -7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 8px 14px -7px rgba(0,0,0,0.75);
+	box-shadow: 0px 8px 14px -7px rgba(0,0,0,0.75);
+}
+
+.percent {
+	position: absolute;
+	top: 12px;
+	right: 4px;
+
+	color: $color-black;
+}
+
+.magnifying-glass {
+	position: absolute;
+	top: -3px;
+	right: -6px;
+	width: 67px;
+}
+
+.progress {
+	height: 40px;
+	overflow: visible;
+	margin-bottom: 0;
+	background-color: $color-white;
+	border-radius: 12px;
+
+	.progress-bar {
+		border-radius: 12px;
+		position: relative;
+	}
+}
+
+/**
+ * ANIMATIONS
+ */
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes nudge {
+  0% {
+    transform: translate(0, 0);
+  }
+  
+  100% {
+    transform: translate(0, 5px);
+  }
+}
+@-moz-keyframes nudge {
+  0% {
+    transform: translate(0, 0);
+  }
+  
+  100% {
+    transform: translate(0, 5px);
+  }
+}
+@keyframes nudge {
+  0% {
+    transform: translate(0, 0);
+  }
+  
+  100% {
+    transform: translate(0, 5px);
+  }
+}
+
+@-webkit-keyframes blinkingAnimation {
+	0% {
+		-webkit-transform:scale(.8)
+	}
+	50% {
+		opacity:.5;
+		-webkit-transform:scale(2.5);
+		transform:scale(2.5)
+	}
+	100% {
+		opacity:0;
+		-webkit-transform:scale(5);
+		transform:scale(5)
+	}
+}
+@keyframes blinkingAnimation {
+	0% {
+		-webkit-transform:scale(.8);
+		transform:scale(.8)
+	}
+	50% {
+		opacity:.5;
+		-webkit-transform:scale(2.5);
+		transform:scale(2.5)
+	}
+	100% {
+		opacity:0;
+		-webkit-transform:scale(5);
+		transform:scale(5)
+	}
+}
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1,nudge 5s linear;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+
+	&.one {
+		-webkit-animation-delay: 0.5s;
+		-moz-animation-delay: 0.5s;
+		animation-delay: 0.5s;
+	}
+
+	&.two {
+		-webkit-animation-delay: 1.5s;
+		-moz-animation-delay: 1.5s;
+		animation-delay: 1.5s;
+	}
+
+	&.three {
+		-webkit-animation-delay: 2.5s;
+		-moz-animation-delay: 2.5s;
+		animation-delay: 2.5s;
+	}
+}
+
+
+
+@-moz-keyframes spinner-loader {
+	0% {
+		-moz-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-moz-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes spinner-loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes spinner-loader {
+	0% {
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+/* :not(:required) hides this rule from IE9 and below */
+.spinner-loader:not(:required) {
+	-moz-animation: spinner-loader 1500ms infinite linear;
+	-webkit-animation: spinner-loader 1500ms infinite linear;
+	animation: spinner-loader 1500ms infinite linear;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	border-radius: 0.5em;
+	-moz-box-shadow: $color-light-blue 1.5em 0 0 0, $color-light-blue 1.1em 1.1em 0 0, $color-light-blue 0 1.5em 0 0, $color-light-blue -1.1em 1.1em 0 0, $color-light-blue -1.5em 0 0 0, $color-light-blue -1.1em -1.1em 0 0, $color-light-blue 0 -1.5em 0 0, $color-light-blue 1.1em -1.1em 0 0;
+	-webkit-box-shadow: $color-light-blue 1.5em 0 0 0, $color-light-blue 1.1em 1.1em 0 0, $color-light-blue 0 1.5em 0 0, $color-light-blue -1.1em 1.1em 0 0, $color-light-blue -1.5em 0 0 0, $color-light-blue -1.1em -1.1em 0 0, $color-light-blue 0 -1.5em 0 0, $color-light-blue 1.1em -1.1em 0 0;
+	box-shadow: $color-light-blue 1.5em 0 0 0, $color-light-blue 1.1em 1.1em 0 0, $color-light-blue 0 1.5em 0 0, $color-light-blue -1.1em 1.1em 0 0, $color-light-blue -1.5em 0 0 0, $color-light-blue -1.1em -1.1em 0 0, $color-light-blue 0 -1.5em 0 0, $color-light-blue 1.1em -1.1em 0 0;
+	display: inline-block;
+	font-size: 4px;
+	width: 1em;
+	height: 1em;
+	margin: 1.5em;
+	overflow: hidden;
+	text-indent: 100%;
+}

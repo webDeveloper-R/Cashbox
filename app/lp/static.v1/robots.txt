@@ -1,0 +1,7 @@
+User-agent: * 
+Disallow: /search
+Disallow: /app/
+Disallow: /results
+Disallow: /login
+Disallow: /checkout
+Disallow: /lp/
